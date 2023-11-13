@@ -48,11 +48,13 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void NextMessage(Message currentMessage)
+    public void ChoiceMessage()
     {
-        Debug.Log(activeMessage);
-        activeMessage = currentMessage.nextMessageId;
-        Debug.Log(activeMessage);
+
+    }
+    public void NextMessage(int nextMessageId)
+    {
+        activeMessage = nextMessageId;
         if (activeMessage == 0)
         {
             Debug.Log("Conversation ended");
@@ -74,7 +76,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            NextMessage(messageToDisplay);
+            NextMessage(messageToDisplay.nextMessageId);
         }
         
     }
