@@ -8,7 +8,7 @@ public class DialogTrigger : MonoBehaviour
 {
     public Message[] messages;
     public Actor[] actors;
-    public string[] stringState;
+    public string[] stringStates;
 
     void Start()
     {
@@ -47,6 +47,7 @@ public class Message
 [System.Serializable]
 public class Actor
 {
+    public int actorId;
     public string name;
     public Sprite sprite;
 }
@@ -54,7 +55,7 @@ public class Actor
 [System.Serializable]
 public class ChoiceOption
 {
-    public string choices;
+    public string choice;
     public string newStringState;
     public int nextMessage;
 }
