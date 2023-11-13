@@ -1,0 +1,132 @@
+{
+  "messages": [
+    {
+      "messageId": 1,
+      "actor": "Enfant",
+      "message": "Bonjour Madame, je jouais avec mes amis au bord du ruisseau plus loin là-bas et mon nouveau bateau s’est fait emporter par le courant et il a disparu près de la roue du moulin...",
+      "nextMessageId": 2
+    },
+    {
+      "messageId": 2,
+      "actor": "Propriétaire",
+      "message": "Oh, je vois, où peut-il bien être maintenant ?",
+      "nextMessageId": 3
+    },
+    {
+      "messageId": 3,
+      "actor": "Enfant",
+      "choices": [
+        {
+          "choice": "Il s’est sûrement échoué dans votre jardin !",
+          "nextMessageId": 4
+        },
+        {
+          "choice": "Il est peut-être coincé dans la roue !",
+          "newStringState": ["removedboat"],
+          "nextMessageId": 5
+        },
+        {
+          "choice": "Je ne sais pas... il pourrait être n’importe où... Vous pourriez aller voir si vous le trouvez s’il vous plaît ?!",
+          "nextMessageId": 6
+        }
+      ]
+    },
+        
+    {
+      "messageId": 4,
+      "actor": "Enfant",
+      "message": "Vous pourriez aller voir si vous le trouvez s’il vous plaît ?!",
+      "nextMessageId": 7
+    },
+    {
+      "messageId": 7,
+      "actor": "Propriétaire",
+      "message": "Bien sûr, attends moi là je vais jeter un œil !",
+      "nextMessageId": 8
+    },
+    {
+      "messageId": 8,
+      "actor": "Propriétaire",
+      "message": "Je n’ai rien trouvé, je suis bien désolée.",
+      "nextMessageId": 9
+    },
+    {
+      "messageId": 9,
+      "actor": "Enfant",
+      "message": "Oooh non mon bateau tout neuf...",
+      "nextMessageId": 0
+    },
+    
+    
+    {
+      "messageId": 5,
+      "actor": "Enfant",
+      "message": "Vous pourriez aller voir si vous le trouvez s’il vous plaît ?!",
+      "nextMessageId": 10
+    },
+    {
+      "messageId": 10,
+      "actor": "Propriétaire",
+      "message": "Bien sûr, attends moi là je vais jeter un œil !",
+      "nextMessageId": 11
+    },
+    {
+      "messageId": 11,
+      "actor": "Propriétaire",
+      "message": "Je l’ai trouvé ! Il était bien caché !",
+      "nextMessageId": 12
+    },
+    {
+      "messageId": 12,
+      "actor": "Enfant",
+      "message": "Merci beaucoup !!!",
+      "nextMessageId": 0
+    },
+        
+    {
+      "messageId": 6,
+      "actor": "Enfant",
+      "message": "Vous pourriez aller voir si vous le trouvez s’il vous plaît ?!",
+      "nextMessageId": 13
+    },
+    {
+      "messageId": 13,
+      "actor": "Propriétaire",
+      "message": "Bien sûr, attends moi là je vais jeter un œil !",
+      "nextMessageId": 14
+    },
+    {
+      "messageId": 14,
+      "actor": "Propriétaire",
+      "message": "Je ne l’ai pas trouvé aurais-tu une idée plus précise à me donner ?",
+      "nextMessageId": 15
+    },
+    
+    {
+      "messageId": 15,
+      "actor": "Enfant",
+      "choices": [
+        {
+          "choice": "Je suis quasiment sûr qu’il s’est échoué dans le jardin.",
+          "nextMessageId": 8
+        },
+        {
+          "choice": "Je suis quasiment sûr qu’il est bloqué dans la roue du moulin.",
+          "newStringState": ["removedboat"],
+          "nextMessageId": 11
+        },
+        {
+          "choice": "Euh bah non, je sais pas...",
+          "nextMessageId": 8
+        }
+      ]
+    },
+
+    {
+      "messageId": 16,
+      "actor": "Propriétaire",
+      "message": "Je ne l’ai pas trouvé aurais-tu une idée plus précise à me donner ?",
+      "nextMessageId": 15
+    }
+  ]
+}
