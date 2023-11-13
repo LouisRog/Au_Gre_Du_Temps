@@ -7,7 +7,6 @@ using UnityEngine;
 public class DialogTrigger : MonoBehaviour
 {
     public Message[] messages;
-    public Actor[] actors;
     public string[] stringStates;
 
     void Start()
@@ -43,20 +42,12 @@ public class MessageList {
 [System.Serializable]
 public class Message
 {
-    public int actorId;
+    public string actor;
     public int messageId;
     public int nextMessageId;
     public string message;
     public ChoiceOption[] choices;
     public Sprite backgroundImage;
-}
-
-[System.Serializable]
-public class Actor
-{
-    public int actorId;
-    public string name;
-    public Sprite sprite;
 }
 
 [System.Serializable]

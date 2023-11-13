@@ -3,73 +3,73 @@
   "messages": [
     {
       "messageId": 1,
-      "actorId": 2,
+      "actor": "Voisin",
       "message": "Ces garnements, là, insupportables! J'essayais de faire ma pionce, nom d’un chien ! Aucun respect pour leurs aînés ! À mon époque, on connaissait le respect. Aujourd'hui, les moutards ne font qu'embêter le monde avec leur Nintendo et leur téléphones portables.",
       "nextMessageId": 2
     },
     {
       "messageId": 2,
-      "actorId": 0,
+      "actor": "Propriétaire",
       "message": "Tout de même, je vous trouve un peu dur ! N’avez vous jamais été jeune?",
       "nextMessageId": 3
     },
     {
       "messageId": 3,
-      "actorId": 2,
+      "actor": "Voisin",
       "message": "Bien sûr que si, c’est tout le problème! Je vais vous dire, si on était oisif comme ça, on ne passait pas l’hiver. On connaissait la valeur du travail. On ne nous chouchoutait pas avec des cadeaux tout le temps, ah ça non ! Moi, l'été, je travaillais au jardin du voisinage, et si j’avais pas chômé, et seulement si, j’avais droit au souper.",
       "nextMessageId": 4
     },
     {
       "messageId": 4,
-      "actorId": 0,
+      "actor": "Propriétaire",
       "message": "Mais les temps ont changé. Si la vie est moins dure, autant en profiter, non?",
       "nextMessageId": 5
     },
     {
       "messageId": 5,
-      "actorId": 2,
+      "actor": "Voisin",
       "message": "Ah ca, c’est vous qui l’dites! Tout votre confort, la, faut pas oublier d'où il vient! C’est nous qu’on s’est battu pour. Si le général voyait ça, pardi, il se retournerait dans sa tombe ! On a gagné votre liberté, et voyez ce que vous en faites.",
       "nextMessageId": 6
     },
     {
       "messageId": 6,
-      "actorId": 0,
+      "actor": "Propriétaire",
       "message": "Vous avez connu la guerre?",
       "nextMessageId": 7
     },
     {
       "messageId": 7,
-      "actorId": 2,
+      "actor": "Voisin",
       "message": "Bien sûr, et pas qu’un peu. Vous croyez que je boîte pour le plaisir?",
       "nextMessageId": 8
     },
     {
       "messageId": 8,
-      "actorId": 0,
+      "actor": "Propriétaire",
       "message": "Vous étiez au front?",
       "nextMessageId": 9
     },
     {
       "messageId": 9,
-      "actorId": 2,
+      "actor": "Voisin",
       "message": "Vous savez, le front, y’en a pas vraiment eu. Pouf. Deux jours plus tard, on avait les boches a nos portes. Dans nos jardins...",
       "nextMessageId": 10
     },
     {
       "messageId": 10,
-      "actorId": 0,
+      "actor": "Propriétaire",
       "message": "Comment ça, le jardin?",
       "nextMessageId": 11
     },
     {
       "messageId": 11,
-      "actorId": 2,
+      "actor": "Voisin",
       "message": "Les allemands avaient élu domicile dans votre bicoque, et je peux vous dire que c’était pas facile de les déloger ces boches !",
       "nextMessageId": 12
     },
     {
       "messageId": 12,
-      "actorId": 2,
+      "actor": "Voisin",
       "choices": [
         {
           "choice": "Bah voyez ces trous, la ? Avec René on avait bazardé une mine pour ralentir les allemands. On faisait avec ce qu’on pouvait. On a bien réussi à leur faire sauter le caisson pour les mettre en fuite, un vrai acte de bravoure !",
@@ -86,38 +86,38 @@
     
     {
       "messageId": 13,
-      "actorId": 0,
+      "actor": "Propriétaire",
       "message": "Ça alors...",
       "nextMessageId": 15
     },
     {
       "messageId": 14,
-      "actorId": 0,
+      "actor": "Propriétaire",
       "message": "Mes condoleances.",
       "nextMessageId": 15
     },
     
     {
       "messageId": 15,
-      "actorId": 2,
+      "actor": "Voisin",
       "message": "Bon c’est pas tout mais faut vraiment que j’aille pioncer moi sinon mes ulcères vont pas me lâcher.",
       "nextMessageId": 16
     },
     {
       "messageId": 16,
-      "actorId": 0,
+      "actor": "Propriétaire",
       "message": "Prenez soin de vous.",
       "nextMessageId": 17
     },
     {
       "messageId": 17,
-      "actorId": 2,
+      "actor": "Voisin",
       "message": "Merci. Vous savez, y’a les gens bien et y’a les autres. Vous en avez pas l’air comme ça, mais je suis sûr que vous êtes dans les biens. Prenez bien soin de votre baraque, elle en a connu des souvenirs. Si ces arbres pouvaient parler, ils vous diraient nos aventures avec René. C'était autre chose que ces morveux.",
       "nextMessageId": 18
     },
     {
       "messageId": 18,
-      "actorId": 2,
+      "actor": "Voisin",
       "choices": [
         {
           "choice": "Tiens, peut être que y’a même encore notre cabane !",
@@ -132,19 +132,19 @@
     },
     {
       "messageId": 19,
-      "actorId": 0,
+      "actor": "Propriétaire",
       "message": "J’irais voir, promis.",
       "nextMessageId": 0
     },
     {
       "messageId": 20,
-      "actorId": 0,
+      "actor": "Propriétaire",
       "message": "Mais il reste vos souvenirs!",
       "nextMessageId": 21
     },
     {
       "messageId": 21,
-      "actorId": 0,
+      "actor": "Propriétaire",
       "message": "Ouai... mais même ça, j’en ai de moins en moins.",
       "nextMessageId": 0
     }
