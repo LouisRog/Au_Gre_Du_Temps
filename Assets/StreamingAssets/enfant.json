@@ -3,9 +3,31 @@
     {
       "messageId": 1,
       "actor": "Enfant",
-      "message": "Bonjour Madame, je jouais avec mes amis au bord du ruisseau plus loin là-bas et mon nouveau bateau s’est fait emporter par le courant et il a disparu près de la roue du moulin...",
+      "message": "Bonjour Madame.",
+      "nextMessageId": 20
+    },
+    {
+      "messageId": 20,
+      "actor": "Enfant",
+      "message": "Je jouais avec mes amis au bord du ruisseau plus loin là-bas...",
+      "backgroundImage": "enfant_example_0.png",
+      "nextMessageId": 21
+    },
+    {
+      "messageId": 21,
+      "actor": "Enfant",
+      "message": "... et mon nouveau bateau s’est fait emporter par le courant...",
+      "backgroundImage": "enfant_example_1.png",
+      "nextMessageId": 22
+    },
+    {
+      "messageId": 22,
+      "actor": "Enfant",
+      "message": "Il a disparu près de la roue du moulin...",
+      "backgroundImage": "enfant_example_2.png",
       "nextMessageId": 2
     },
+
     {
       "messageId": 2,
       "actor": "Propriétaire",

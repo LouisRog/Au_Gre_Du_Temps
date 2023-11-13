@@ -61,7 +61,7 @@ public class Message
     public int nextMessageId;
     public string message;
     public ChoiceOption[] choices;
-    public Sprite backgroundImage;
+    public string backgroundImage;
 }
 
 [System.Serializable]
