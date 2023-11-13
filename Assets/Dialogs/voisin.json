@@ -1,0 +1,16 @@
+{
+  "messages": [
+    {
+      "actorId": 0,
+      "messageId": 0,
+      "nextMessageId": 0,
+      "message": ""
+    },
+    {
+      "actorId": 1,
+      "messageId": 1,
+      "nextMessageId": 1,
+      "message": ""
+    }
+  ]
+}
