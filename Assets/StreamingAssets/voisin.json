@@ -1,16 +1,71 @@
+
 {
   "messages": [
     {
-      "actorId": 0,
-      "messageId": 0,
-      "nextMessageId": 0,
-      "message": ""
+      "messageId": 1,
+      "actorId": 2,
+      "message": "Ces garnements, là, insupportables! J'essayais de faire ma pionce, nom d’un chien ! Aucun respect pour leurs aînés ! À mon époque, on connaissait le respect. Aujourd'hui, les moutards ne font qu'embêter le monde avec leur Nintendo et leur téléphones portables.",
+      "nextMessageId": 2
     },
     {
-      "actorId": 1,
-      "messageId": 1,
-      "nextMessageId": 1,
-      "message": ""
+      "messageId": 2,
+      "actorId": 0,
+      "message": "Tout de même, je vous trouve un peu dur ! N’avez vous jamais été jeune?",
+      "nextMessageId": 3
+    },
+    {
+      "messageId": 3,
+      "actorId": 2,
+      "message": "Bien sûr que si, c’est tout le problème! Je vais vous dire, si on était oisif comme ça, on ne passait pas l’hiver. On connaissait la valeur du travail. On ne nous chouchoutait pas avec des cadeaux tout le temps, ah ça non ! Moi, l'été, je travaillais au jardin du voisinage, et si j’avais pas chômé, et seulement si, j’avais droit au souper.",
+      "nextMessageId": 4
+    },
+    {
+      "messageId": 4,
+      "actorId": 0,
+      "message": "Mais les temps ont changé. Si la vie est moins dure, autant en profiter, non?",
+      "nextMessageId": 5
+    },
+    {
+      "messageId": 5,
+      "actorId": 2,
+      "message": "Ah ca, c’est vous qui l’dites! Tout votre confort, la, faut pas oublier d'où il vient! C’est nous qu’on s’est battu pour. Si le général voyait ça, pardi, il se retournerait dans sa tombe ! On a gagné votre liberté, et voyez ce que vous en faites.",
+      "nextMessageId": 6
+    },
+    {
+      "messageId": 6,
+      "actorId": 0,
+      "message": "Vous avez connu la guerre?",
+      "nextMessageId": 7
+    },
+    {
+      "messageId": 7,
+      "actorId": 2,
+      "message": "Bien sûr, et pas qu’un peu. Vous croyez que je boîte pour le plaisir?",
+      "nextMessageId": 8
+    },
+    {
+      "messageId": 8,
+      "actorId": 0,
+      "message": "Vous étiez au front?",
+      "nextMessageId": 9
+    },
+    {
+      "messageId": 9,
+      "actorId": 2,
+      "message": "Vous savez, le front, y’en a pas vraiment eu. Pouf. Deux jours plus tard, on avait les boches a nos portes. Dans nos jardins...",
+      "nextMessageId": 10
+    },
+    {
+      "messageId": 10,
+      "actorId": 0,
+      "message": "Comment ça, le jardin?",
+      "nextMessageId": 11
+    },
+    {
+      "messageId": 11,
+      "actorId": 2,
+      "message": "Les allemands avaient élu domicile dans votre bicoque, et je peux vous dire que c’était pas facile de les déloger ces boches !",
+      "nextMessageId": 12
     }
   ]
 }
