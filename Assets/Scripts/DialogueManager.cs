@@ -11,7 +11,8 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI actorName;
     public TextMeshProUGUI messageText;
     public RectTransform backgroundBox;
-    public Button choicePrefab;
+    public GameObject twoChoicesButton;
+    public GameObject threeChoicesButton;
 
     Message[] currentMessages;
     Message messageToDisplay;
@@ -37,22 +38,23 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            for(int i = 0; i< messageToDisplay.choices.Length; i++)
+            if (messageToDisplay.choices.Length == 3)
             {
-                Button b = Instantiate(choicePrefab);
-                b.transform.SetParent(backgroundBox.transform);
-                b.GetComponentInChildren<TextMeshProUGUI>().text = messageToDisplay.choices[i].choice;
+                GameObject buttonSet = Instantiate(threeChoicesButton);
+                buttonSet.transform.SetParent(backgroundBox.transform);
 
+                for(int i = 0; i< messageToDisplay.choices.Length; i++)
+                {
+                    buttonSet.transform.GetChild(i).GetComponentInChildren<TextMeshProUGUI>().text = messageToDisplay.choices[i].choice;
+                }
             }
             
         }
     }
 
-    public void NextMessage(Message currentMessage)
+    public void NextMessage(int nextMessageId)
     {
-        Debug.Log(activeMessage);
-        activeMessage = currentMessage.nextMessageId;
-        Debug.Log(activeMessage);
+        activeMessage = nextMessageId;
         if (activeMessage == 0)
         {
             Debug.Log("Conversation ended");
@@ -74,7 +76,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            NextMessage(messageToDisplay);
+            NextMessage(messageToDisplay.nextMessageId);
         }
         
     }
