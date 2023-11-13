@@ -12,19 +12,19 @@ public class DialogTrigger : MonoBehaviour
 
     void Start()
     {
-        string resourcesPath = "Assets/Dialogs/";
+        string resourcesPath = "Assets/StreamingAssets/";
         string[] jsonFiles = Directory.GetFiles(resourcesPath, "*.json");
-        List<Message> all_messages = new List<Message>();
+        List<Message> allMessages = new List<Message>();
 
         foreach (string filePath in jsonFiles)
         {
             string json = File.ReadAllText(filePath);
             MessageList data = JsonUtility.FromJson<MessageList>(json);
             foreach (Message d in data.messages) {
-                all_messages.Add(d);
+                allMessages.Add(d);
             }
         }
-        messages = all_messages.ToArray();
+        messages = allMessages.ToArray();
         Debug.Log("Loaded this many messages: " + messages.Length);
     }
 }
