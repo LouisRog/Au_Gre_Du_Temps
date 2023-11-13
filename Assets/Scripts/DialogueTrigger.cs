@@ -24,7 +24,14 @@ public class DialogTrigger : MonoBehaviour
                 allMessages.Add(d);
             }
         }
+
+        allMessages.Add(new Message()); // adds the 0 manually
         messages = allMessages.ToArray();
+        foreach (Message m in allMessages)
+        {
+            messages[m.messageId] = m;
+        }
+
         Debug.Log("Loaded this many messages: " + messages.Length);
     }
 }
