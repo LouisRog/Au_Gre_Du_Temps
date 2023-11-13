@@ -66,6 +66,87 @@
       "actorId": 2,
       "message": "Les allemands avaient élu domicile dans votre bicoque, et je peux vous dire que c’était pas facile de les déloger ces boches !",
       "nextMessageId": 12
+    },
+    {
+      "messageId": 12,
+      "actorId": 2,
+      "choices": [
+        {
+          "choice": "Bah voyez ces trous, la ? Avec René on avait bazardé une mine pour ralentir les allemands. On faisait avec ce qu’on pouvait. On a bien réussi à leur faire sauter le caisson pour les mettre en fuite, un vrai acte de bravoure !",
+          "newStringState": ["trou"],
+          "nextMessage": 13
+        },
+        {
+          "choice": "Ils avaient mis des mines partout, on pouvait plus sortir. Ils ont tenu le moulin jusqu’à la fin de la guerre. On a bien essayé de placer une mine avec mon René dans un dernier acte de bravoure mais notre inexpérience a scellé nos chances de réussite et par la même occasion, elle a emporté René.",
+          "newStringState": ["trou", "cavenazi"],
+          "nextMessage": 14
+        }
+      ]
+    },
+    
+    {
+      "messageId": 13,
+      "actorId": 0,
+      "message": "Ça alors...",
+      "nextMessageId": 15
+    },
+    {
+      "messageId": 14,
+      "actorId": 0,
+      "message": "Mes condoleances.",
+      "nextMessageId": 15
+    },
+    
+    {
+      "messageId": 15,
+      "actorId": 2,
+      "message": "Bon c’est pas tout mais faut vraiment que j’aille pioncer moi sinon mes ulcères vont pas me lâcher.",
+      "nextMessageId": 16
+    },
+    {
+      "messageId": 16,
+      "actorId": 0,
+      "message": "Prenez soin de vous.",
+      "nextMessageId": 17
+    },
+    {
+      "messageId": 17,
+      "actorId": 2,
+      "message": "Merci. Vous savez, y’a les gens bien et y’a les autres. Vous en avez pas l’air comme ça, mais je suis sûr que vous êtes dans les biens. Prenez bien soin de votre baraque, elle en a connu des souvenirs. Si ces arbres pouvaient parler, ils vous diraient nos aventures avec René. C'était autre chose que ces morveux.",
+      "nextMessageId": 18
+    },
+    {
+      "messageId": 18,
+      "actorId": 2,
+      "choices": [
+        {
+          "choice": "Tiens, peut être que y’a même encore notre cabane !",
+          "newStringState": ["cabane"],
+          "nextMessage": 19
+        },
+        {
+          "choice": "J’avais même fait une petite cabane dans le jardin à l’époque. Et maintenant, il ne reste plus rien, la guerre a pris beaucoup de choses...",
+          "nextMessage": 20
+        }
+      ]
+    },
+    {
+      "messageId": 19,
+      "actorId": 0,
+      "message": "J’irais voir, promis.",
+      "nextMessageId": 0
+    },
+    {
+      "messageId": 20,
+      "actorId": 0,
+      "message": "Mais il reste vos souvenirs!",
+      "nextMessageId": 21
+    },
+    {
+      "messageId": 21,
+      "actorId": 0,
+      "message": "Ouai... mais même ça, j’en ai de moins en moins.",
+      "nextMessageId": 0
     }
   ]
 }
