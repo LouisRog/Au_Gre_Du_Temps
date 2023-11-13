@@ -4,67 +4,67 @@
     {
       "messageId": 101,
       "actor": "Voisin",
-      "message": "Ces garnements, là, insupportables! J'essayais de faire ma pionce, nom d’un chien ! Aucun respect pour leurs aînés ! À mon époque, on connaissait le respect. Aujourd'hui, les moutards ne font qu'embêter le monde avec leur Nintendo et leur téléphones portables.",
+      "message": "Ces garnements, lÃ , insupportables! J'essayais de faire ma pionce, nom dâ€™un chien ! Aucun respect pour leurs aÃ®nÃ©s ! Ã€ mon Ã©poque, on connaissait le respect. Aujourd'hui, les moutards ne font qu'embÃªter le monde avec leur Nintendo et leur tÃ©lÃ©phones portables.",
       "nextMessageId": 102
     },
     {
       "messageId": 102,
-      "actor": "Propriétaire",
-      "message": "Tout de même, je vous trouve un peu dur ! N’avez vous jamais été jeune?",
+      "actor": "PropriÃ©taire",
+      "message": "Tout de mÃªme, je vous trouve un peu dur ! Nâ€™avez vous jamais Ã©tÃ© jeune?",
       "nextMessageId": 103
     },
     {
       "messageId": 103,
       "actor": "Voisin",
-      "message": "Bien sûr que si, c’est tout le problème! Je vais vous dire, si on était oisif comme ça, on ne passait pas l’hiver. On connaissait la valeur du travail. On ne nous chouchoutait pas avec des cadeaux tout le temps, ah ça non ! Moi, l'été, je travaillais au jardin du voisinage, et si j’avais pas chômé, et seulement si, j’avais droit au souper.",
+      "message": "Bien sÃ»r que si, câ€™est tout le problÃ¨me! Je vais vous dire, si on Ã©tait oisif comme Ã§a, on ne passait pas lâ€™hiver. On connaissait la valeur du travail. On ne nous chouchoutait pas avec des cadeaux tout le temps, ah Ã§a non ! Moi, l'Ã©tÃ©, je travaillais au jardin du voisinage, et si jâ€™avais pas chÃ´mÃ©, et seulement si, jâ€™avais droit au souper.",
       "nextMessageId": 104
     },
     {
       "messageId": 104,
-      "actor": "Propriétaire",
-      "message": "Mais les temps ont changé. Si la vie est moins dure, autant en profiter, non?",
+      "actor": "PropriÃ©taire",
+      "message": "Mais les temps ont changÃ©. Si la vie est moins dure, autant en profiter, non?",
       "nextMessageId": 105
     },
     {
       "messageId": 105,
       "actor": "Voisin",
-      "message": "Ah ca, c’est vous qui l’dites! Tout votre confort, la, faut pas oublier d'où il vient! C’est nous qu’on s’est battu pour. Si le général voyait ça, pardi, il se retournerait dans sa tombe ! On a gagné votre liberté, et voyez ce que vous en faites.",
+      "message": "Ah ca, câ€™est vous qui lâ€™dites! Tout votre confort, la, faut pas oublier d'oÃ¹ il vient! Câ€™est nous quâ€™on sâ€™est battu pour. Si le gÃ©nÃ©ral voyait Ã§a, pardi, il se retournerait dans sa tombe ! On a gagnÃ© votre libertÃ©, et voyez ce que vous en faites.",
       "nextMessageId": 106
     },
     {
       "messageId": 106,
-      "actor": "Propriétaire",
+      "actor": "PropriÃ©taire",
       "message": "Vous avez connu la guerre?",
       "nextMessageId": 107
     },
     {
       "messageId": 107,
       "actor": "Voisin",
-      "message": "Bien sûr, et pas qu’un peu. Vous croyez que je boîte pour le plaisir?",
+      "message": "Bien sÃ»r, et pas quâ€™un peu. Vous croyez que je boÃ®te pour le plaisir?",
       "nextMessageId": 108
     },
     {
       "messageId": 108,
-      "actor": "Propriétaire",
-      "message": "Vous étiez au front?",
+      "actor": "PropriÃ©taire",
+      "message": "Vous Ã©tiez au front?",
       "nextMessageId": 109
     },
     {
       "messageId": 109,
       "actor": "Voisin",
-      "message": "Vous savez, le front, y’en a pas vraiment eu. Pouf. Deux jours plus tard, on avait les boches a nos portes. Dans nos jardins...",
+      "message": "Vous savez, le front, yâ€™en a pas vraiment eu. Pouf. Deux jours plus tard, on avait les boches a nos portes. Dans nos jardins...",
       "nextMessageId": 110
     },
     {
       "messageId": 110,
-      "actor": "Propriétaire",
-      "message": "Comment ça, le jardin?",
+      "actor": "PropriÃ©taire",
+      "message": "Comment Ã§a, le jardin?",
       "nextMessageId": 111
     },
     {
       "messageId": 111,
       "actor": "Voisin",
-      "message": "Les allemands avaient élu domicile dans votre bicoque, et je peux vous dire que c’était pas facile de les déloger ces boches !",
+      "message": "Les allemands avaient Ã©lu domicile dans votre bicoque, et je peux vous dire que câ€™Ã©tait pas facile de les dÃ©loger ces boches !",
       "nextMessageId": 112
     },
     {
@@ -72,12 +72,12 @@
       "actor": "Voisin",
       "choices": [
         {
-          "choice": "Bah voyez ces trous, la ? Avec René on avait bazardé une mine pour ralentir les allemands. On faisait avec ce qu’on pouvait. On a bien réussi à leur faire sauter le caisson pour les mettre en fuite, un vrai acte de bravoure !",
+          "choice": "Bah voyez ces trous, la ? Avec RenÃ© on avait bazardÃ© une mine pour ralentir les allemands. On faisait avec ce quâ€™on pouvait. On a bien rÃ©ussi Ã  leur faire sauter le caisson pour les mettre en fuite, un vrai acte de bravoure !",
           "newStringState": ["trou"],
           "nextMessage": 113
         },
         {
-          "choice": "Ils avaient mis des mines partout, on pouvait plus sortir. Ils ont tenu le moulin jusqu’à la fin de la guerre. On a bien essayé de placer une mine avec mon René dans un dernier acte de bravoure mais notre inexpérience a scellé nos chances de réussite et par la même occasion, elle a emporté René.",
+          "choice": "Ils avaient mis des mines partout, on pouvait plus sortir. Ils ont tenu le moulin jusquâ€™Ã  la fin de la guerre. On a bien essayÃ© de placer une mine avec mon RenÃ© dans un dernier acte de bravoure mais notre inexpÃ©rience a scellÃ© nos chances de rÃ©ussite et par la mÃªme occasion, elle a emportÃ© RenÃ©.",
           "newStringState": ["trou", "cavenazi"],
           "nextMessage": 114
         }
@@ -85,32 +85,32 @@
     },
     {
       "messageId": 113,
-      "actor": "Propriétaire",
-      "message": "Ça alors...",
+      "actor": "PropriÃ©taire",
+      "message": "Ã‡a alors...",
       "nextMessageId": 115
     },
     {
       "messageId": 114,
-      "actor": "Propriétaire",
+      "actor": "PropriÃ©taire",
       "message": "Mes condoleances.",
       "nextMessageId": 115
     },
     {
       "messageId": 115,
       "actor": "Voisin",
-      "message": "Bon c’est pas tout mais faut vraiment que j’aille pioncer moi sinon mes ulcères vont pas me lâcher.",
+      "message": "Bon câ€™est pas tout mais faut vraiment que jâ€™aille pioncer moi sinon mes ulcÃ¨res vont pas me lÃ¢cher.",
       "nextMessageId": 116
     },
     {
       "messageId": 116,
-      "actor": "Propriétaire",
+      "actor": "PropriÃ©taire",
       "message": "Prenez soin de vous.",
       "nextMessageId": 117
     },
     {
       "messageId": 117,
       "actor": "Voisin",
-      "message": "Merci. Vous savez, y’a les gens bien et y’a les autres. Vous en avez pas l’air comme ça, mais je suis sûr que vous êtes dans les biens. Prenez bien soin de votre baraque, elle en a connu des souvenirs. Si ces arbres pouvaient parler, ils vous diraient nos aventures avec René. C'était autre chose que ces morveux.",
+      "message": "Merci. Vous savez, yâ€™a les gens bien et yâ€™a les autres. Vous en avez pas lâ€™air comme Ã§a, mais je suis sÃ»r que vous Ãªtes dans les biens. Prenez bien soin de votre baraque, elle en a connu des souvenirs. Si ces arbres pouvaient parler, ils vous diraient nos aventures avec RenÃ©. C'Ã©tait autre chose que ces morveux.",
       "nextMessageId": 118
     },
     {
@@ -118,32 +118,32 @@
       "actor": "Voisin",
       "choices": [
         {
-          "choice": "Tiens, peut être que y’a même encore notre cabane !",
+          "choice": "Tiens, peut Ãªtre que yâ€™a mÃªme encore notre cabane !",
           "newStringState": ["cabane"],
           "nextMessage": 119
         },
         {
-          "choice": "J’avais même fait une petite cabane dans le jardin à l’époque. Et maintenant, il ne reste plus rien, la guerre a pris beaucoup de choses...",
+          "choice": "Jâ€™avais mÃªme fait une petite cabane dans le jardin Ã  lâ€™Ã©poque. Et maintenant, il ne reste plus rien, la guerre a pris beaucoup de choses...",
           "nextMessage": 120
         }
       ]
     },
     {
       "messageId": 119,
-      "actor": "Propriétaire",
-      "message": "J’irais voir, promis.",
+      "actor": "PropriÃ©taire",
+      "message": "Jâ€™irais voir, promis.",
       "nextMessageId": 0
     },
     {
       "messageId": 120,
-      "actor": "Propriétaire",
+      "actor": "PropriÃ©taire",
       "message": "Mais il reste vos souvenirs!",
       "nextMessageId": 121
     },
     {
       "messageId": 121,
-      "actor": "Propriétaire",
-      "message": "Ouai... mais même ça, j’en ai de moins en moins.",
+      "actor": "PropriÃ©taire",
+      "message": "Ouai... mais mÃªme Ã§a, jâ€™en ai de moins en moins.",
       "nextMessageId": 0
     }
   ]

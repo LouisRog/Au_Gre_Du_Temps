@@ -3,25 +3,25 @@
     {
       "messageId": 201,
       "actor": "Factrice",
-      "message": "Les odeurs sont bien différentes en été ici ! J’espère que le chaleur n’a pas trop entamé les [fleurs choisies précédemment au printemps]. Quel plaisir de voir ce vieux moulin de nouveau habité et vivant ! L’Été a toujours été une saison particulière pour cette vieille bâtisse, avez-vous entendu parler de cette histoire de météore que tout le monde connaît au village ?",
+      "message": "Les odeurs sont bien diffÃ©rentes en Ã©tÃ© ici ! Jâ€™espÃ¨re que le chaleur nâ€™a pas trop entamÃ© les [fleurs choisies prÃ©cÃ©demment au printemps]. Quel plaisir de voir ce vieux moulin de nouveau habitÃ© et vivant ! Lâ€™Ã‰tÃ© a toujours Ã©tÃ© une saison particuliÃ¨re pour cette vieille bÃ¢tisse, avez-vous entendu parler de cette histoire de mÃ©tÃ©ore que tout le monde connaÃ®t au village ?",
       "nextMessageId": 202
     },
     {
       "messageId": 202,
-      "actor": "Propriétaire",
-      "message": "De météore, vous dîtes ?",
+      "actor": "PropriÃ©taire",
+      "message": "De mÃ©tÃ©ore, vous dÃ®tes ?",
       "nextMessageId": 203
     },
     {
       "messageId": 203,
       "actor": "Factrice",
-      "message": "Figurez-vous qu’une nuit, un minuscule météore venu des étoiles a entrepris de finir son périple dans le jardin laissant derrière lui un petit cratère !",
+      "message": "Figurez-vous quâ€™une nuit, un minuscule mÃ©tÃ©ore venu des Ã©toiles a entrepris de finir son pÃ©riple dans le jardin laissant derriÃ¨re lui un petit cratÃ¨re !",
       "nextMessageId": 204
     },
     {
       "messageId": 204,
-      "actor": "Propriétaire",
-      "message": "Un impact de météore ?! J’ai plutôt entendu que ce cratère était dû à l’explosion d’une mine.",
+      "actor": "PropriÃ©taire",
+      "message": "Un impact de mÃ©tÃ©ore ?! Jâ€™ai plutÃ´t entendu que ce cratÃ¨re Ã©tait dÃ» Ã  lâ€™explosion dâ€™une mine.",
       "nextMessageId": 205
     },
     {
@@ -29,11 +29,11 @@
       "actor": "Factrice",
       "choices": [
         {
-          "choice": "Je suis catégorique. Je me souviens encore du vacarme qu’il y avait eu cette nuit-là !",
+          "choice": "Je suis catÃ©gorique. Je me souviens encore du vacarme quâ€™il y avait eu cette nuit-lÃ  !",
           "nextMessageId": 206
         },
         {
-          "choice": "Maintenant que vous me le dites, voilà que je me mets à douter. J’aime écouter puis raconter les histoires du village. Peut-être avez-vous raison ? L’explosion d’une mine vous dîtes ? Je veux absolument en savoir plus, il faudra qu'on en reparle. Par contre j'ai du courrier à livrer, moi, donc ce sera pour la prochaine fois !",
+          "choice": "Maintenant que vous me le dites, voilÃ  que je me mets Ã  douter. Jâ€™aime Ã©couter puis raconter les histoires du village. Peut-Ãªtre avez-vous raison ? Lâ€™explosion dâ€™une mine vous dÃ®tes ? Je veux absolument en savoir plus, il faudra qu'on en reparle. Par contre j'ai du courrier Ã  livrer, moi, donc ce sera pour la prochaine fois !",
           "nextMessageId": 0
         }
       ]
@@ -41,8 +41,8 @@
 
     {
       "messageId": 206,
-      "actor": "Propriétaire",
-      "message": "Etiez-vous sûr qu’il s’agissait d’un impact de météore ?",
+      "actor": "PropriÃ©taire",
+      "message": "Etiez-vous sÃ»r quâ€™il sâ€™agissait dâ€™un impact de mÃ©tÃ©ore ?",
       "nextMessageId": 207
     },
 
@@ -51,12 +51,12 @@
       "actor": "Factrice",
       "choices": [
         {
-          "choice": "Sûr et certaine. Le village avait d’ailleurs fait les gros titres à l’époque ! Allez-donc voir vous-même! Moi en tout cas il faut que j'y aille, j'ai du courrier à livrer.",
+          "choice": "SÃ»r et certaine. Le village avait dâ€™ailleurs fait les gros titres Ã  lâ€™Ã©poque ! Allez-donc voir vous-mÃªme! Moi en tout cas il faut que j'y aille, j'ai du courrier Ã  livrer.",
           "newStringState": ["scintillement"],
           "nextMessageId": 0
         },
         {
-          "choice": "Maintenant que vous me le dites, voilà que je me mets à douter. Peut-être avez-vous raison ? Enfin bref. Je vous laisse, je continue ma tournée.",
+          "choice": "Maintenant que vous me le dites, voilÃ  que je me mets Ã  douter. Peut-Ãªtre avez-vous raison ? Enfin bref. Je vous laisse, je continue ma tournÃ©e.",
           "nextMessageId": 0
         }
       ]
