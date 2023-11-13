@@ -6,6 +6,11 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
+    [SerializeField]
+    public int next_conversation_index = 0;
+    [SerializeField]
+    public int[] conversations_entry_points = { 1, 101, 201 };
+
     private Message[] messages;
     public string[] stringStates;
 
@@ -33,9 +38,14 @@ public class DialogueTrigger : MonoBehaviour
         Debug.Log("Loaded this many messages: " + allMessages.Count);
     }
 
-    public void StartDialogue()
+
+    void ClickOnDoor()
     {
-        FindAnyObjectByType<DialogueManager>().OpenDialogue(messages, 1);
+        if (next_conversation_index < conversations_entry_points.Length)
+        {
+            FindAnyObjectByType<DialogueManager>().OpenDialogue(messages, conversations_entry_points[next_conversation_index]);
+            next_conversation_index++;
+        }
     }
 }
 
