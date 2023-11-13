@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public Message[] messages;
+    private Message[] messages;
     public string[] stringStates;
 
     void Start()
@@ -31,6 +31,11 @@ public class DialogueTrigger : MonoBehaviour
         }
 
         Debug.Log("Loaded this many messages: " + allMessages.Count);
+    }
+
+    public void StartDialogue()
+    {
+        FindAnyObjectByType<DialogueManager>().OpenDialogue(messages);
     }
 }
 

@@ -7,24 +7,30 @@ using UnityEngine;
 public class DialogueManager : MonoBehaviour
 {
     public Image actorImage;
-    public TextMeshPro actorName;
-    public TextMeshPro messageText;
+    public TextMeshProUGUI actorName;
+    public TextMeshProUGUI messageText;
     public RectTransform backgroundBox;
 
-    List<Message> currentMessages;
+    Message[] currentMessages;
     int activeMessage = 0;
 
-    public void OpenDialogue(List<Message> messages)
+    public void OpenDialogue(Message[] messages)
     {
         currentMessages = messages;
-        activeMessage = 0;
+        activeMessage = 1;
+
+        Debug.Log("Started conversation ! Loaded messages: " + messages.Length);
+        DisplayMessage();
     }
 
     public void DisplayMessage()
     {
         Message messageToDisplay = currentMessages[activeMessage];
+        Debug.Log(messageToDisplay.message);
         messageText.text = messageToDisplay.message;
+        actorName.text = messageToDisplay.actor + " : ";
     }
+
     // Start is called before the first frame update
     void Start()
     {
