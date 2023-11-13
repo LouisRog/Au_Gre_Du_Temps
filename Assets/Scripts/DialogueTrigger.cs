@@ -63,6 +63,6 @@ public class Actor
 public class ChoiceOption
 {
     public string choice;
-    public string newStringState;
+    public string[] newStringState;
     public int nextMessage;
 }
