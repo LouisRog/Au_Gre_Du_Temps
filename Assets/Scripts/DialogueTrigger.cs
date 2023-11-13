@@ -4,7 +4,7 @@ using System.IO;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class DialogTrigger : MonoBehaviour
+public class DialogueTrigger : MonoBehaviour
 {
     public Message[] messages;
     public string[] stringStates;
