@@ -41,6 +41,8 @@ public class DialogueManager : MonoBehaviour
             {
                 Button b = Instantiate(choicePrefab);
                 b.transform.SetParent(backgroundBox.transform);
+                Vector3 pos = backgroundBox.anchoredPosition;
+                b.GetComponent<RectTransform>().anchoredPosition = pos;
                 b.GetComponentInChildren<TextMeshProUGUI>().text = messageToDisplay.choices[i].choice;
 
             }
@@ -48,10 +50,6 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void ChoiceMessage()
-    {
-
-    }
     public void NextMessage(int nextMessageId)
     {
         activeMessage = nextMessageId;
