@@ -35,7 +35,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public void StartDialogue()
     {
-        FindAnyObjectByType<DialogueManager>().OpenDialogue(messages);
+        FindAnyObjectByType<DialogueManager>().OpenDialogue(messages, 1);
     }
 }
 
