@@ -11,7 +11,8 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI actorName;
     public TextMeshProUGUI messageText;
     public RectTransform backgroundBox;
-    public Button choicePrefab;
+    public GameObject twoChoicesButton;
+    public GameObject threeChoicesButton;
 
     Message[] currentMessages;
     Message messageToDisplay;
@@ -37,14 +38,15 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            for(int i = 0; i< messageToDisplay.choices.Length; i++)
+            if (messageToDisplay.choices.Length == 3)
             {
-                Button b = Instantiate(choicePrefab);
-                b.transform.SetParent(backgroundBox.transform);
-                Vector3 pos = backgroundBox.anchoredPosition;
-                b.GetComponent<RectTransform>().anchoredPosition = pos;
-                b.GetComponentInChildren<TextMeshProUGUI>().text = messageToDisplay.choices[i].choice;
+                GameObject buttonSet = Instantiate(threeChoicesButton);
+                buttonSet.transform.SetParent(backgroundBox.transform);
 
+                for(int i = 0; i< messageToDisplay.choices.Length; i++)
+                {
+                    buttonSet.transform.GetChild(i).GetComponentInChildren<TextMeshProUGUI>().text = messageToDisplay.choices[i].choice;
+                }
             }
             
         }

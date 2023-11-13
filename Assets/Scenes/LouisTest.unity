@@ -452,7 +452,8 @@ MonoBehaviour:
   actorName: {fileID: 733424112}
   messageText: {fileID: 1439800193}
   backgroundBox: {fileID: 535580708}
-  choicePrefab: {fileID: 4706841811905337468, guid: 6eb3dee8983115b4ea954c86e3907b8b, type: 3}
+  twoChoicesButton: {fileID: 4968166171367210070, guid: 7b4386d9437f9eb4b828d8c387e17803, type: 3}
+  threeChoicesButton: {fileID: 4968166171367210070, guid: 7b4386d9437f9eb4b828d8c387e17803, type: 3}
 --- !u!114 &535580710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -543,6 +544,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6475b1fc8c5228b478cda5b13f415e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  next_conversation_index: 0
+  conversations_entry_points: 0100000065000000c9000000
   stringStates: []
 --- !u!114 &622125261
 MonoBehaviour:
@@ -590,7 +593,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 622125260}
         m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
-        m_MethodName: StartDialogue
+        m_MethodName: ClickOnDoor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -801,6 +804,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6475b1fc8c5228b478cda5b13f415e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  next_conversation_index: 0
+  conversations_entry_points: 0100000065000000c9000000
   stringStates: []
 --- !u!4 &1093113190
 Transform:

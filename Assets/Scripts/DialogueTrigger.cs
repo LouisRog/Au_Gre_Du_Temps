@@ -39,7 +39,7 @@ public class DialogueTrigger : MonoBehaviour
     }
 
 
-    void ClickOnDoor()
+    public void ClickOnDoor()
     {
         if (next_conversation_index < conversations_entry_points.Length)
         {
