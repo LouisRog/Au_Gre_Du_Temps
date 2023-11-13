@@ -11,6 +11,7 @@ public class DialogTrigger : MonoBehaviour
 
     void Start()
     {
+        messages = new Message[1000]; // Make sure its big enough for our proto
         string resourcesPath = "Assets/StreamingAssets/";
         string[] jsonFiles = Directory.GetFiles(resourcesPath, "*.json");
         List<Message> allMessages = new List<Message>();
@@ -24,14 +25,12 @@ public class DialogTrigger : MonoBehaviour
             }
         }
 
-        allMessages.Add(new Message()); // adds the 0 manually
-        messages = allMessages.ToArray();
         foreach (Message m in allMessages)
         {
             messages[m.messageId] = m;
         }
 
-        Debug.Log("Loaded this many messages: " + messages.Length);
+        Debug.Log("Loaded this many messages: " + allMessages.Count);
     }
 }
 
