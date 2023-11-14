@@ -98,7 +98,7 @@ public class DialogueManager : MonoBehaviour
     {
         messageToDisplay = currentMessages[activeMessage];
 
-        //PlayAudioIfExists(messageToDisplay);
+        PlayAudioIfExists(messageToDisplay);
 
         if (messageToDisplay.choices == null)
         {
