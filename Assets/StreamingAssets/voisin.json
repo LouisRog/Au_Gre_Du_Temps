@@ -167,15 +167,25 @@
       "actor": "Voisin",
       "choices": [
         {
-          "choice": "Tiens, peut être que y’a même encore notre cabane !",
+          "choice": "On avait fait une petite cabane...",
           "newStringState": ["cabane"],
           "nextMessageId": 119
         },
         {
-          "choice": "J’avais même fait une petite cabane dans le jardin à l’époque.",
-          "nextMessageId": 129
+          "choice": "On avait construit une petite voiture...",
+          "nextMessageId": 131
+        },
+        {
+          "choice": "On avait fait un terrain de vélo...",
+          "nextMessageId": 131
         }
       ]
+    },
+    {
+      "messageId": 131,
+      "actor": "Voisin",      
+      "message": "C'était notre coin secret avec mon ami René. Peut-être qu’elle a survécu...",
+      "nextMessageId": 129
     },
     {
       "messageId": 129,
@@ -197,7 +207,7 @@
     },
     {
       "messageId": 121,
-      "actor": "Propriétaire",
+      "actor": "Voisin",
       "message": "Ouai... mais même ça, j’en ai de moins en moins.",
       "nextMessageId": 0
     }
