@@ -41,7 +41,42 @@ public class DialogueManager : MonoBehaviour
             audioSource.Play();
         }
     }
-    
+    void DisplayMessageText(Message message)
+    {
+        messageText.text = messageToDisplay.message;
+        actorName.text = messageToDisplay.actor + " : ";
+    }
+
+    void DisplayMessageChoices(Message message)
+    {
+        Debug.Log(messageToDisplay.choices.Length);
+        if (messageToDisplay.choices.Length == 3)
+        {
+            buttonSet = Instantiate(threeChoicesButton, backgroundBox);
+
+            for (int i = 0; i < messageToDisplay.choices.Length; i++)
+            {
+                choiceToDisplay = messageToDisplay.choices[i];
+                int nextMessage = choiceToDisplay.nextMessageId;
+                buttonSet.transform.GetChild(i).GetComponentInChildren<TextMeshProUGUI>().text = messageToDisplay.choices[i].choice;
+                buttonSet.transform.GetChild(i).GetComponent<Button>().onClick.AddListener(() => ChoiceMessage(nextMessage));
+            }
+        }
+
+        if (messageToDisplay.choices.Length == 2)
+        {
+            buttonSet = Instantiate(twoChoicesButton, backgroundBox);
+
+            for (int i = 0; i < messageToDisplay.choices.Length; i++)
+            {
+                choiceToDisplay = messageToDisplay.choices[i];
+                int nextMessage = choiceToDisplay.nextMessageId;
+                buttonSet.transform.GetChild(i).GetComponentInChildren<TextMeshProUGUI>().text = messageToDisplay.choices[i].choice;
+                buttonSet.transform.GetChild(i).GetComponent<Button>().onClick.AddListener(() => ChoiceMessage(nextMessage));
+            }
+        }
+    }
+
     public void DisplayMessage()
     {
         messageToDisplay = currentMessages[activeMessage];
@@ -50,38 +85,11 @@ public class DialogueManager : MonoBehaviour
 
         if (messageToDisplay.choices == null)
         {
-            messageText.text = messageToDisplay.message;
-            actorName.text = messageToDisplay.actor + " : ";
+            DisplayMessageText(messageToDisplay);
         }
         else
         {
-            Debug.Log(messageToDisplay.choices.Length);
-            if (messageToDisplay.choices.Length == 3)
-            {
-                buttonSet = Instantiate(threeChoicesButton, backgroundBox);
-
-                for(int i = 0; i< messageToDisplay.choices.Length; i++)
-                {
-                    choiceToDisplay = messageToDisplay.choices[i];
-                    int nextMessage = choiceToDisplay.nextMessageId;
-                    buttonSet.transform.GetChild(i).GetComponentInChildren<TextMeshProUGUI>().text = messageToDisplay.choices[i].choice;
-                    buttonSet.transform.GetChild(i).GetComponent<Button>().onClick.AddListener(()=> ChoiceMessage(nextMessage));
-                }
-            }
-
-            if (messageToDisplay.choices.Length == 2)
-            {
-                buttonSet = Instantiate(twoChoicesButton, backgroundBox);
-
-                for (int i = 0; i < messageToDisplay.choices.Length; i++)
-                {
-                    choiceToDisplay = messageToDisplay.choices[i];
-                    int nextMessage = choiceToDisplay.nextMessageId;
-                    buttonSet.transform.GetChild(i).GetComponentInChildren<TextMeshProUGUI>().text = messageToDisplay.choices[i].choice;
-                    buttonSet.transform.GetChild(i).GetComponent<Button>().onClick.AddListener(() => ChoiceMessage(nextMessage));
-                }
-            }
-
+            DisplayMessageChoices(messageToDisplay);
         }
     }
 
