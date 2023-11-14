@@ -18,7 +18,8 @@ public class DialogueTrigger : MonoBehaviour
     void Start()
     {
         messages = new Message[1000]; // Make sure its big enough for our proto
-        string resourcesPath = "Assets/StreamingAssets/";
+        string resourcesPath = Application.streamingAssetsPath;
+
         string[] jsonFiles = Directory.GetFiles(resourcesPath, "*.json");
         List<Message> allMessages = new List<Message>();
 
