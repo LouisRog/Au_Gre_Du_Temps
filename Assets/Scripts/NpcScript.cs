@@ -8,7 +8,8 @@ using Unity.VisualScripting;
 public class NpcScript : MonoBehaviour
 {   
     private Vector3[] pathval = {new Vector3(0.4f,0.1f,0.1f),new Vector3(0.1f,0.1f,-0.6f)};
-    DialogueTrigger dialogue;
+    [SerializeField] GameObject dialogueManager;
+    
     // Start is called before the first frame update
     void Start()
     {   
@@ -17,6 +18,6 @@ public class NpcScript : MonoBehaviour
 
     // Update is called once per frame
     void OnMouseDown(){
-        dialogue.ClickOnDoor();
+        dialogueManager.GetComponent<DialogueTrigger>().ClickOnDoor();
     }
 }
