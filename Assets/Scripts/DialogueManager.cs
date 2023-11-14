@@ -61,7 +61,7 @@ public class DialogueManager : MonoBehaviour
     }
     void DisplayMessageText(Message messageToDisplay)
     {
-        if(messageToDisplay.actor == "Propri�taire")
+        if(messageToDisplay.actor == "Propriétaire")
         {
             proprioMessageText.text = messageToDisplay.message;
             proprioName.text = messageToDisplay.actor + " : ";
