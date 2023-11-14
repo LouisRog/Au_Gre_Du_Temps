@@ -10,10 +10,16 @@ public class DialogueManager : MonoBehaviour
 {
     public Image actorImage;
     public TextMeshProUGUI actorName;
-    public TextMeshProUGUI messageText;
-    public RectTransform backgroundBox;
+    public TextMeshProUGUI actorMessageText;
+    public RectTransform actorBackgroundBox;
+
+    public TextMeshProUGUI proprioName;
+    public TextMeshProUGUI proprioMessageText;
+
     public GameObject twoChoicesButton;
     public GameObject threeChoicesButton;
+    public Image memoryBackground;
+    [SerializeField] GameObject UICanvas;
 
     private GameObject objectToTrigger;
 
@@ -22,13 +28,19 @@ public class DialogueManager : MonoBehaviour
     Message[] currentMessages;
     Message messageToDisplay;
     ChoiceOption choiceToDisplay;
-    GameObject buttonSet;
     int activeMessage = 0;
 
     public void OpenDialogue(Message[] messages, int beginIDMessage)
     {
         currentMessages = messages;
         activeMessage = beginIDMessage;
+        UICanvas.SetActive(true);
+
+        actorName.text = "";
+        actorMessageText.text = "";
+
+        proprioName.text = "";
+        proprioMessageText.text = "";
 
         //Debug.Log("Started conversation ! Loaded messages: " + messages.Length);
         DisplayMessage();
@@ -45,36 +57,39 @@ public class DialogueManager : MonoBehaviour
     }
     void DisplayMessageText(Message message)
     {
-        messageText.text = messageToDisplay.message;
-        actorName.text = messageToDisplay.actor + " : ";
+        if(message.actor == "Propriétaire")
+        {
+            proprioMessageText.text = messageToDisplay.message;
+            proprioName.text = messageToDisplay.actor + " : ";
+        }
+        else
+        {
+            Sprite actorImg = Resources.Load<Sprite>("CharacterImages/" + message.actor);
+            actorImage.sprite = actorImg;
+            actorMessageText.text = messageToDisplay.message;
+            actorName.text = messageToDisplay.actor + " : ";
+        }
     }
 
     void DisplayMessageChoices(Message message)
     {
-        Debug.Log(messageToDisplay.choices.Length);
         if (messageToDisplay.choices.Length == 3)
         {
-            buttonSet = Instantiate(threeChoicesButton, backgroundBox);
+            threeChoicesButton.SetActive(true);
 
-            for (int i = 0; i < messageToDisplay.choices.Length; i++)
+            for (int i = 0; i < 3; i++)
             {
-                choiceToDisplay = messageToDisplay.choices[i];
-                int nextMessage = choiceToDisplay.nextMessageId;
-                buttonSet.transform.GetChild(i).GetComponentInChildren<TextMeshProUGUI>().text = messageToDisplay.choices[i].choice;
-                buttonSet.transform.GetChild(i).GetComponent<Button>().onClick.AddListener(() => ChoiceMessage(nextMessage));
+                threeChoicesButton.transform.GetChild(i).GetComponentInChildren<TextMeshProUGUI>().text = messageToDisplay.choices[i].choice;
             }
         }
 
         if (messageToDisplay.choices.Length == 2)
         {
-            buttonSet = Instantiate(twoChoicesButton, backgroundBox);
+            twoChoicesButton.SetActive(true);
 
             for (int i = 0; i < messageToDisplay.choices.Length; i++)
             {
-                choiceToDisplay = messageToDisplay.choices[i];
-                int nextMessage = choiceToDisplay.nextMessageId;
-                buttonSet.transform.GetChild(i).GetComponentInChildren<TextMeshProUGUI>().text = messageToDisplay.choices[i].choice;
-                buttonSet.transform.GetChild(i).GetComponent<Button>().onClick.AddListener(() => ChoiceMessage(nextMessage));
+                twoChoicesButton.transform.GetChild(i).GetComponentInChildren<TextMeshProUGUI>().text = messageToDisplay.choices[i].choice;
             }
         }
     }
@@ -83,7 +98,7 @@ public class DialogueManager : MonoBehaviour
     {
         messageToDisplay = currentMessages[activeMessage];
 
-        PlayAudioIfExists(messageToDisplay);
+        //PlayAudioIfExists(messageToDisplay);
 
         if (messageToDisplay.choices == null)
         {
@@ -95,10 +110,11 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void ChoiceMessage(int nextMessageId)
+    public void ChoiceMessage(int choiceId)
     {
-        Destroy(buttonSet);
-        NextMessage(nextMessageId);
+        threeChoicesButton.SetActive(false);
+        twoChoicesButton.SetActive(false);
+        NextMessage(messageToDisplay.choices[choiceId].nextMessageId);
         if (choiceToDisplay.newStringState != null)
         {
             stateOfTheGame.Append<string>(choiceToDisplay.newStringState[0]);
@@ -121,6 +137,7 @@ public class DialogueManager : MonoBehaviour
         if (activeMessage == 0)
         {
             Debug.Log("Conversation ended");
+            UICanvas.SetActive(false);
         }
         else
         {
@@ -131,7 +148,10 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        UICanvas.SetActive(false);
+        threeChoicesButton.SetActive(false);
+        twoChoicesButton.SetActive(false);
+
     }
 
     // Update is called once per frame
