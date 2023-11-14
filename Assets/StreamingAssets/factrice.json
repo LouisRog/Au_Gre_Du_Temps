@@ -90,7 +90,7 @@
           "nextMessageId": 214
         },
         {
-          "choice": "Maintenant que vous me le dites, voilà que je me mets à douter.",
+          "choice": "Voilà que je me mets à douter...",
           "nextMessageId": 215
         }
       ]
@@ -105,7 +105,7 @@
     {
       "messageId": 215,
       "actor": "Factrice",
-      "message": "Peut-être avez-vous raison ? C'est comme ces histoires de vaccins, là. On n'est jamais sur de rien aujourd'hui...",
+      "message": "Si vous le dites... Peut-être avez-vous raison ? C'est comme ces histoires de vaccins, là. On n'est jamais sur de rien aujourd'hui...",
       "nextMessageId": 213
     },
     
