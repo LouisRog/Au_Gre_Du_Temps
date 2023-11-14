@@ -10,6 +10,12 @@
       "messageId": 152,
       "actor": "Propriétaire",
       "message": "La serre vous dites ? Avec cette chaleur, rien n'est sûr dans mon esprit en ce moment.",
+      "nextMessageId": 161
+    },
+    {
+      "messageId": 161,
+      "actor": "Jardinier",
+      "message": "La serre,",
       "nextMessageId": 153
     },
     {
@@ -22,7 +28,7 @@
           "nextMessageId": 154
         },
         {
-          "choice": "Haha, serre c’est un bien grand mot aujourd’hui, je l’admets.",
+          "choice": "Haha, c’est un bien grand mot!",
           "nextMessageId": 155
         }
       ]
@@ -31,13 +37,13 @@
     {
       "messageId": 154,
       "actor": "Jardinier",
-      "message": "La serre au fond de votre jardin, ne me dites pas que vous l’avez raté. J’essaie de la garder dans un état irréprochable. Elle regorge de plantes exotiques importées, cela serait dommage de laisser tout cela disparaître.",
+      "message": "La serre au fond de votre jardin, ne me dites pas que vous l’avez ratée. J’essayais de la garder dans un état irréprochable. Elle regorge de plantes exotiques importées, cela serait dommage de laisser tout cela disparaître.",
       "nextMessageId": 160
     },
     {
       "messageId": 155,
       "actor": "Jardinier",
-      "message": "Un ancien propriétaire avait importé des plantes exotiques de ses différents voyages, c’était une sorte de panthéon de ses aventures passées.",
+      "message": "Un ancien propriétaire qui avait trop d'argent se croyait aventurier et avait importé des plantes exotiques de ses différents voyages, c’était une sorte de panthéon de ses aventures passées.",
       "nextMessageId": 156
     },
     {
@@ -65,19 +71,19 @@
     {
       "messageId": 158,
       "actor": "Jardinier",
-      "message": "Mais si vous êtes suffisamment attentive, vous verrez dans votre jardin quelques plantes qui ont réussi à se faire au climat. ",
+      "message": "Mais si vous faites suffisamment attention, vous verrez dans votre jardin quelques plantes qui ont réussi à se faire au climat.",
       "nextMessageId": 160
     },
     {
       "messageId": 159,
       "actor": "Jardinier",
-      "message": "Et quelques arbres qui en dépassent, pas grand-chose de plus. Le temps a fait son œuvre.",
+      "message": "Et quelques arbres qui en dépassent, pas grand-chose de plus. Le temps a fait son œuvre. Quel gachis d'argent...",
       "nextMessageId": 160
     },
     {
       "messageId": 160,
       "actor": "Jardinier",
-      "message": "Jetez un oeil a l'occasion. Au revoir",
+      "message": "Jetez un oeil a l'occasion. Au revoir.",
       "nextMessageId": 0
     }
 
