@@ -13,6 +13,7 @@ public class DialogueTrigger : MonoBehaviour
 
     private Message[] messages;
     public string[] stringStates;
+    [SerializeField] GameObject DialogueBox;
 
     void Start()
     {
@@ -43,7 +44,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (next_conversation_index < conversations_entry_points.Length)
         {
-            FindAnyObjectByType<DialogueManager>().OpenDialogue(messages, conversations_entry_points[next_conversation_index]);
+            DialogueBox.GetComponent<DialogueManager>().OpenDialogue(messages, conversations_entry_points[next_conversation_index]);
             next_conversation_index++;
         }
     }
