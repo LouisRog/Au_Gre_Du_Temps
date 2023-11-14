@@ -69,5 +69,5 @@ public class ChoiceOption
 {
     public string choice;
     public string[] newStringState;
-    public int nextMessage;
+    public int nextMessageId;
 }
