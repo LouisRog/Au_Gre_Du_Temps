@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine;
 using System;
+using System.Linq;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -14,8 +15,12 @@ public class DialogueManager : MonoBehaviour
     public GameObject twoChoicesButton;
     public GameObject threeChoicesButton;
 
+    static public List<string> stateOfTheGame;
+
     Message[] currentMessages;
     Message messageToDisplay;
+    ChoiceOption choiceToDisplay;
+    GameObject buttonSet;
     int activeMessage = 0;
 
     public void OpenDialogue(Message[] messages, int beginIDMessage)
@@ -24,10 +29,10 @@ public class DialogueManager : MonoBehaviour
         activeMessage = beginIDMessage;
 
         Debug.Log("Started conversation ! Loaded messages: " + messages.Length);
-        DisplayMessage();
+        DisplayMessage(ChoiceMessage);
     }
 
-    public void DisplayMessage()
+    public void DisplayMessage(UnityEngine.Events.UnityAction ChoiceMessage)
     {
         messageToDisplay = currentMessages[activeMessage];
         if (messageToDisplay.choices == null)
@@ -40,18 +45,30 @@ public class DialogueManager : MonoBehaviour
         {
             if (messageToDisplay.choices.Length == 3)
             {
-                GameObject buttonSet = Instantiate(threeChoicesButton);
-                buttonSet.transform.SetParent(backgroundBox.transform);
+                buttonSet = Instantiate(threeChoicesButton, backgroundBox);
 
                 for(int i = 0; i< messageToDisplay.choices.Length; i++)
                 {
+                    choiceToDisplay = messageToDisplay.choices[i];
                     buttonSet.transform.GetChild(i).GetComponentInChildren<TextMeshProUGUI>().text = messageToDisplay.choices[i].choice;
+                    buttonSet.transform.GetChild(i).GetComponent<Button>().onClick.AddListener(ChoiceMessage);
                 }
             }
             
         }
     }
 
+    public void ChoiceMessage()
+    {
+        Destroy(buttonSet);
+        NextMessage(choiceToDisplay.nextMessageId);
+        if (choiceToDisplay.newStringState != null)
+        {
+            stateOfTheGame.Append<string>(choiceToDisplay.newStringState[0]);
+        }
+
+
+    }
     public void NextMessage(int nextMessageId)
     {
         activeMessage = nextMessageId;
@@ -61,7 +78,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            DisplayMessage();
+            DisplayMessage(ChoiceMessage);
         }
 
     }
