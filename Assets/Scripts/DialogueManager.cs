@@ -15,6 +15,8 @@ public class DialogueManager : MonoBehaviour
     public GameObject twoChoicesButton;
     public GameObject threeChoicesButton;
 
+    private GameObject objectToTrigger;
+
     static public List<string> stateOfTheGame;
 
     Message[] currentMessages;
@@ -100,10 +102,18 @@ public class DialogueManager : MonoBehaviour
         if (choiceToDisplay.newStringState != null)
         {
             stateOfTheGame.Append<string>(choiceToDisplay.newStringState[0]);
+            ObjectStateManager();
         }
 
 
     }
+    void ObjectStateManager(){
+        foreach(String var in stateOfTheGame){
+            objectToTrigger = GameObject.FindWithTag(var);
+            objectToTrigger.SetActive(true);
+        }
+    }
+
     public void NextMessage(int nextMessageId)
     {
         activeMessage = nextMessageId;
@@ -134,4 +144,5 @@ public class DialogueManager : MonoBehaviour
         //Debug.Log(stateOfTheGame);
         
     }
+
 }
