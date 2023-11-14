@@ -31,10 +31,25 @@ public class DialogueManager : MonoBehaviour
         //Debug.Log("Started conversation ! Loaded messages: " + messages.Length);
         DisplayMessage();
     }
-
+    void PlayAudioIfExists(Message message)
+    {
+        AudioSource audioSource = GetComponent<AudioSource>();
+        AudioClip foundClip = Resources.Load<AudioClip>("FlashbackSounds/" + message.messageId.ToString());
+        if (foundClip != null)
+        {
+            Debug.Log("AUDIO");
+            audioSource.clip = foundClip;
+            audioSource.Play();
+        }
+        Debug.Log("NOAUDIO");
+    }
+    
     public void DisplayMessage()
     {
         messageToDisplay = currentMessages[activeMessage];
+
+        PlayAudioIfExists(messageToDisplay);
+
         if (messageToDisplay.choices == null)
         {
             messageText.text = messageToDisplay.message;
