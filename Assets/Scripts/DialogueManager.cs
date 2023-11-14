@@ -11,10 +11,11 @@ public class DialogueManager : MonoBehaviour
     public Image actorImage;
     public TextMeshProUGUI actorName;
     public TextMeshProUGUI actorMessageText;
-    public RectTransform actorBackgroundBox;
+    public GameObject actorBackgroundBox;
 
     public TextMeshProUGUI proprioName;
     public TextMeshProUGUI proprioMessageText;
+    public GameObject proprioBackgroundBox;
 
     public GameObject twoChoicesButton;
     public GameObject threeChoicesButton;
@@ -27,7 +28,6 @@ public class DialogueManager : MonoBehaviour
 
     Message[] currentMessages;
     Message messageToDisplay;
-    ChoiceOption choiceToDisplay;
     int activeMessage = 0;
 
     public void OpenDialogue(Message[] messages, int beginIDMessage)
@@ -55,23 +55,35 @@ public class DialogueManager : MonoBehaviour
             audioSource.Play();
         }
     }
-    void DisplayMessageText(Message message)
+    void DisplayMessageText(Message messageToDisplay)
     {
-        if(message.actor == "Propriétaire")
+        if(messageToDisplay.actor == "Propriétaire")
         {
             proprioMessageText.text = messageToDisplay.message;
             proprioName.text = messageToDisplay.actor + " : ";
+            proprioBackgroundBox.SetActive(true);
+            actorBackgroundBox.SetActive(false);
+
         }
         else
         {
-            Sprite actorImg = Resources.Load<Sprite>("CharacterImages/" + message.actor);
+            Sprite actorImg = Resources.Load<Sprite>("CharacterImages/" + messageToDisplay.actor);
+            Sprite memoryImg = Resources.Load<Sprite>("CharacterImages/" + "Proprietaire");
+            if (messageToDisplay.backgroundImage != null)
+            {
+                Debug.Log(messageToDisplay.backgroundImage);
+                memoryImg = Resources.Load<Sprite>("FlashbackImages/" + messageToDisplay.backgroundImage);
+            }
             actorImage.sprite = actorImg;
+            memoryBackground.sprite = memoryImg;
             actorMessageText.text = messageToDisplay.message;
             actorName.text = messageToDisplay.actor + " : ";
+            proprioBackgroundBox.SetActive(false);
+            actorBackgroundBox.SetActive(true);
         }
     }
 
-    void DisplayMessageChoices(Message message)
+    void DisplayMessageChoices(Message messageToDisplay)
     {
         if (messageToDisplay.choices.Length == 3)
         {
@@ -98,7 +110,7 @@ public class DialogueManager : MonoBehaviour
     {
         messageToDisplay = currentMessages[activeMessage];
 
-        PlayAudioIfExists(messageToDisplay);
+        //PlayAudioIfExists(messageToDisplay);
 
         if (messageToDisplay.choices == null)
         {
@@ -114,12 +126,15 @@ public class DialogueManager : MonoBehaviour
     {
         threeChoicesButton.SetActive(false);
         twoChoicesButton.SetActive(false);
-        NextMessage(messageToDisplay.choices[choiceId].nextMessageId);
-        if (choiceToDisplay.newStringState != null)
+        if (messageToDisplay.choices[choiceId].newStringState != null)
         {
-            stateOfTheGame.Append<string>(choiceToDisplay.newStringState[0]);
+            for(int i = 0; i< messageToDisplay.choices[choiceId].newStringState.Length; i++)
+            {
+                stateOfTheGame.Append<string>(messageToDisplay.choices[choiceId].newStringState[i]);
+            }
             ObjectStateManager();
         }
+        NextMessage(messageToDisplay.choices[choiceId].nextMessageId);
 
 
     }
