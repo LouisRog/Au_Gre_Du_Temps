@@ -37,11 +37,9 @@ public class DialogueManager : MonoBehaviour
         AudioClip foundClip = Resources.Load<AudioClip>("FlashbackSounds/" + message.messageId.ToString());
         if (foundClip != null)
         {
-            Debug.Log("AUDIO");
             audioSource.clip = foundClip;
             audioSource.Play();
         }
-        Debug.Log("NOAUDIO");
     }
     
     public void DisplayMessage()
