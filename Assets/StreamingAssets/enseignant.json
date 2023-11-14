@@ -1,0 +1,44 @@
+{
+  "messages": [
+    {
+      "messageId": 51,
+      "actor": "Enseignant",
+      "message": "Bonjour, je suis vraiment navré de vous déranger, vous n’auriez pas vu passer un groupe d’enfant avec un petit brun ? C’est mon fils. Pardon, je ne me suis pas présenté... Je suis l’enseignant du village. Mon fils est turbulent... il était plus facile quand j’étais avec sa mère... depuis le divorce ce n’est plus pareil. Euh... Je ne voulais pas autant m’étaler sur ma vie privée... Wow, il fait vraiment beau. Nous avons un bel été cette année.",
+      "nextMessageId": 52
+    },
+    {
+      "messageId": 52,
+      "actor": "Propriétaire",
+      "message": "Oui, effectivement, il fait beau. Je l’ai bien vu passer, il était à la recherche de son bateau.",
+      "nextMessageId": 53
+    },
+    {
+      "messageId": 53,
+      "actor": "Enseignant",
+      "message": "Ah moi aussi, je me rappelle quand je venais souvent chercher mon ballon dans ce jardin l’été. J’étais passionné par la biodiversité de ce lieu, c'est ce qui m’a donné envie de devenir enseignant.",
+      "choices": [
+        {
+          "choice": "On entendait les criquets",
+          "newStringState": ["criquet"],
+          "nextMessageId": 54
+        },
+        {
+          "choice": "On entendait les tourterelles",
+          "newStringState": ["tourterelle"],
+          "nextMessageId": 54
+        },
+        {
+          "choice": "On entendait les crapauds",
+          "newStringState": ["crapaud"],
+          "nextMessageId": 54
+        }
+      ]
+    },
+    {
+      "messageId": 54,
+      "actor": "Enseignant",
+      "message": "Penchez l’oreille, on peut les entendre ! Merci quand même, nos chemins risquent de se recroiser, mon chat aime bien roder dans les alentours.",
+      "nextMessageId": 0
+    }
+  ]
+}
