@@ -142,13 +142,6 @@
           "nextMessageId": 8
         }
       ]
-    },
-
-    {
-      "messageId": 16,
-      "actor": "Propriétaire",
-      "message": "Je ne l’ai pas trouvé aurais-tu une idée plus précise à me donner ?",
-      "nextMessageId": 15
     }
   ]
 }

@@ -9,7 +9,7 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField]
     public int next_conversation_index = 0;
     [SerializeField]
-    public int[] conversations_entry_points = { 1, 101, 201 };
+    public int[] conversations_entry_points = { 1, 51, 101, 151, 201 };
 
     private Message[] messages;
     public string[] stringStates;
