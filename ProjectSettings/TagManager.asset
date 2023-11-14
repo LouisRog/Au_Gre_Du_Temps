@@ -3,7 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - trou
+  - cavenazi
+  - cabane
+  - removedboat
+  - scintillement
+  - criquet
+  - tourterelle
+  - crapaud
+  - goodgreenhouse
+  - plantinsteadofgreenhouse
+  - ruinedgreenhouse
   layers:
   - Default
   - TransparentFX
