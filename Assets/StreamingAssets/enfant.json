@@ -11,19 +11,22 @@
       "messageId": 20,
       "actor": "Enfant",
       "message": "Je jouais avec mes amis au bord du ruisseau plus loin là-bas...",
-      "nextMessageId": 21
+      "nextMessageId": 21,
+      "backgroundImage": "Enfant_0"
     },
     {
       "messageId": 21,
       "actor": "Enfant",
       "message": "... et mon nouveau bateau s’est fait emporter par le courant...",
-      "nextMessageId": 22
+      "nextMessageId": 22,
+      "backgroundImage": "Enfant_1"
     },
     {
       "messageId": 22,
       "actor": "Enfant",
       "message": "Il a disparu près de la roue du moulin...",
-      "nextMessageId": 2
+      "nextMessageId": 2,
+      "backgroundImage": "Enfant_2"
     },
     
     {
