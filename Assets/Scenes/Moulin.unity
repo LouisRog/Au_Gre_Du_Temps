@@ -1864,6 +1864,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224232789}
   - component: {fileID: 224232790}
+  - component: {fileID: 224232791}
   m_Layer: 0
   m_Name: Grasshoppers
   m_TagString: criquet
@@ -1986,6 +1987,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &224232791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224232788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e527eb787b8fe4db1e620c20a58524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &224807119
 GameObject:
   m_ObjectHideFlags: 0
@@ -4223,6 +4236,7 @@ GameObject:
   m_Component:
   - component: {fileID: 509213164}
   - component: {fileID: 509213165}
+  - component: {fileID: 509213166}
   m_Layer: 0
   m_Name: Frogs
   m_TagString: crapaud
@@ -4344,6 +4358,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &509213166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509213163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e527eb787b8fe4db1e620c20a58524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &524524869
 GameObject:
   m_ObjectHideFlags: 0
@@ -11443,6 +11469,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1364911337}
   - component: {fileID: 1364911338}
+  - component: {fileID: 1364911339}
   m_Layer: 0
   m_Name: Birds
   m_TagString: tourterelle
@@ -11564,6 +11591,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1364911339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364911336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e527eb787b8fe4db1e620c20a58524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1365625671
 GameObject:
   m_ObjectHideFlags: 0
