@@ -23,12 +23,16 @@ public class DialogueManager : MonoBehaviour
 
     private GameObject objectToTrigger;
 
-    static public List<string> stateOfTheGame;
+    static public List<string> stateOfTheGame = new List<String>();
 
     Message[] currentMessages;
     Message messageToDisplay;
     ChoiceOption choiceToDisplay;
     int activeMessage = 0;
+
+    DialogueActivable [] activables;
+
+
 
     public void OpenDialogue(Message[] messages, int beginIDMessage)
     {
@@ -57,7 +61,7 @@ public class DialogueManager : MonoBehaviour
     }
     void DisplayMessageText(Message message)
     {
-        if(message.actor == "Propriétaire")
+        if(message.actor == "Propriï¿½taire")
         {
             proprioMessageText.text = messageToDisplay.message;
             proprioName.text = messageToDisplay.actor + " : ";
@@ -114,19 +118,31 @@ public class DialogueManager : MonoBehaviour
     {
         threeChoicesButton.SetActive(false);
         twoChoicesButton.SetActive(false);
-        NextMessage(messageToDisplay.choices[choiceId].nextMessageId);
-        if (choiceToDisplay.newStringState != null)
-        {
-            stateOfTheGame.Append<string>(choiceToDisplay.newStringState[0]);
+        String tag = messageToDisplay.choices[choiceId].newStringState[0];
+        if (tag != null)
+        {   
+            stateOfTheGame.Add(tag);
             ObjectStateManager();
         }
-
+        NextMessage(messageToDisplay.choices[choiceId].nextMessageId);
 
     }
     void ObjectStateManager(){
-        foreach(String var in stateOfTheGame){
-            objectToTrigger = GameObject.FindWithTag(var);
-            objectToTrigger.SetActive(true);
+        Debug.Log("je lance la marmelade " + activables.Length);
+        foreach(var str in stateOfTheGame){
+            Debug.Log(str);
+            foreach(DialogueActivable da in activables){
+                Debug.Log(da);  
+                if(da != null && da.gameObject.tag == str)
+                    if(str == "removedboat"){
+                        da.gameObject.SetActive(false);
+                    }
+                    else{
+                     da.gameObject.SetActive(true);
+                    }
+            }
+           // objectToTrigger = GameObject.FindWithTag(str);
+            //objectToTrigger.SetActive(true);
         }
     }
 
@@ -152,6 +168,8 @@ public class DialogueManager : MonoBehaviour
         threeChoicesButton.SetActive(false);
         twoChoicesButton.SetActive(false);
 
+        activables = FindObjectsOfType<DialogueActivable>(true);
+        Debug.Log("l" + activables.Length);
     }
 
     // Update is called once per frame
