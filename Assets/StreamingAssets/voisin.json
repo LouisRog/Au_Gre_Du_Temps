@@ -95,14 +95,14 @@
       "actor": "Voisin",
       "choices": [
         {
-          "choice": "Avec René on avait bazardé des mines pour ralentir les allemands.",
+          "choice": "On avait bazardé des mines.",
           "newStringState": ["trou"],
-          "nextMessage": 125
+          "nextMessageId": 125
         },
         {
           "choice": "Ils avaient mis des mines partout!",
           "newStringState": ["trou", "cavenazi"],
-          "nextMessage": 126
+          "nextMessageId": 126
         }
       ]
     },
@@ -110,7 +110,7 @@
     {
       "messageId": 125,
       "actor": "Voisin",
-      "message": "On faisait avec ce qu’on pouvait. On a bien réussi à leur faire sauter le caisson pour les mettre en fuite, un vrai acte de bravoure !",
+      "message": "Vous savez, pour ralentir l'enemi. Avec René, on faisait avec ce qu’on pouvait. On a bien réussi à leur faire sauter le caisson pour les mettre en fuite, un vrai acte de bravoure !",
       "nextMessageId": 113
     },
     {
