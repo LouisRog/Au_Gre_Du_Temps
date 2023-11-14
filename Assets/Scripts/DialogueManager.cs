@@ -28,21 +28,21 @@ public class DialogueManager : MonoBehaviour
         currentMessages = messages;
         activeMessage = beginIDMessage;
 
-        Debug.Log("Started conversation ! Loaded messages: " + messages.Length);
-        DisplayMessage(ChoiceMessage);
+        //Debug.Log("Started conversation ! Loaded messages: " + messages.Length);
+        DisplayMessage();
     }
 
-    public void DisplayMessage(UnityEngine.Events.UnityAction ChoiceMessage)
+    public void DisplayMessage()
     {
         messageToDisplay = currentMessages[activeMessage];
         if (messageToDisplay.choices == null)
         {
-            Debug.Log(messageToDisplay.message);
             messageText.text = messageToDisplay.message;
             actorName.text = messageToDisplay.actor + " : ";
         }
         else
         {
+            Debug.Log(messageToDisplay.choices.Length);
             if (messageToDisplay.choices.Length == 3)
             {
                 buttonSet = Instantiate(threeChoicesButton, backgroundBox);
@@ -50,18 +50,32 @@ public class DialogueManager : MonoBehaviour
                 for(int i = 0; i< messageToDisplay.choices.Length; i++)
                 {
                     choiceToDisplay = messageToDisplay.choices[i];
+                    int nextMessage = choiceToDisplay.nextMessageId;
                     buttonSet.transform.GetChild(i).GetComponentInChildren<TextMeshProUGUI>().text = messageToDisplay.choices[i].choice;
-                    buttonSet.transform.GetChild(i).GetComponent<Button>().onClick.AddListener(ChoiceMessage);
+                    buttonSet.transform.GetChild(i).GetComponent<Button>().onClick.AddListener(()=> ChoiceMessage(nextMessage));
                 }
             }
-            
+
+            if (messageToDisplay.choices.Length == 2)
+            {
+                buttonSet = Instantiate(twoChoicesButton, backgroundBox);
+
+                for (int i = 0; i < messageToDisplay.choices.Length; i++)
+                {
+                    choiceToDisplay = messageToDisplay.choices[i];
+                    int nextMessage = choiceToDisplay.nextMessageId;
+                    buttonSet.transform.GetChild(i).GetComponentInChildren<TextMeshProUGUI>().text = messageToDisplay.choices[i].choice;
+                    buttonSet.transform.GetChild(i).GetComponent<Button>().onClick.AddListener(() => ChoiceMessage(nextMessage));
+                }
+            }
+
         }
     }
 
-    public void ChoiceMessage()
+    public void ChoiceMessage(int nextMessageId)
     {
         Destroy(buttonSet);
-        NextMessage(choiceToDisplay.nextMessageId);
+        NextMessage(nextMessageId);
         if (choiceToDisplay.newStringState != null)
         {
             stateOfTheGame.Append<string>(choiceToDisplay.newStringState[0]);
@@ -72,13 +86,14 @@ public class DialogueManager : MonoBehaviour
     public void NextMessage(int nextMessageId)
     {
         activeMessage = nextMessageId;
+        //Debug.Log(activeMessage);
         if (activeMessage == 0)
         {
             Debug.Log("Conversation ended");
         }
         else
         {
-            DisplayMessage(ChoiceMessage);
+            DisplayMessage();
         }
 
     }
@@ -95,6 +110,7 @@ public class DialogueManager : MonoBehaviour
         {
             NextMessage(messageToDisplay.nextMessageId);
         }
+        //Debug.Log(stateOfTheGame);
         
     }
 }

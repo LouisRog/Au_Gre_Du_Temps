@@ -452,7 +452,7 @@ MonoBehaviour:
   actorName: {fileID: 733424112}
   messageText: {fileID: 1439800193}
   backgroundBox: {fileID: 535580708}
-  twoChoicesButton: {fileID: 4968166171367210070, guid: 7b4386d9437f9eb4b828d8c387e17803, type: 3}
+  twoChoicesButton: {fileID: 8622494392855567420, guid: 39c448d756217c6438352f028c3f9eeb, type: 3}
   threeChoicesButton: {fileID: 4968166171367210070, guid: 7b4386d9437f9eb4b828d8c387e17803, type: 3}
 --- !u!114 &535580710
 MonoBehaviour:
