@@ -110,7 +110,7 @@ public class DialogueManager : MonoBehaviour
     {
         messageToDisplay = currentMessages[activeMessage];
 
-        //PlayAudioIfExists(messageToDisplay);
+        PlayAudioIfExists(messageToDisplay);
 
         if (messageToDisplay.choices == null)
         {
@@ -166,6 +166,8 @@ public class DialogueManager : MonoBehaviour
         UICanvas.SetActive(false);
         threeChoicesButton.SetActive(false);
         twoChoicesButton.SetActive(false);
+        actorBackgroundBox.SetActive(false);
+        proprioBackgroundBox.SetActive(false);
 
     }
 
