@@ -1,5 +1,6 @@
+
 {
-  "messages": [
+    "messages": [
     {
       "messageId": 1,
       "actor": "Enfant",
@@ -24,7 +25,7 @@
       "message": "Il a disparu près de la roue du moulin...",
       "nextMessageId": 2
     },
-
+    
     {
       "messageId": 2,
       "actor": "Propriétaire",
@@ -34,21 +35,33 @@
     {
       "messageId": 3,
       "actor": "Enfant",
+      "message": "Il est sûrement...",
+      "nextMessageId": 23
+    },
+    {
+      "messageId": 23,
+      "actor": "Enfant",
       "choices": [
         {
-          "choice": "Il s’est sûrement échoué dans votre jardin !",
+          "choice": "...échoué dans votre jardin !",
           "nextMessageId": 4
         },
         {
-          "choice": "Il est peut-être coincé dans la roue !",
+          "choice": "...coincé dans la roue !",
           "newStringState": ["removedboat"],
           "nextMessageId": 5
         },
         {
-          "choice": "Je ne sais pas... il pourrait être n’importe où... Vous pourriez aller voir si vous le trouvez s’il vous plaît ?!",
-          "nextMessageId": 6
+          "choice": "... quelque part.",
+          "nextMessageId": 24
         }
       ]
+    },
+    {
+      "messageId": 24,
+      "actor": "Enfant",
+      "message": "Je ne sais pas... Il pourrait être n’importe où... Vous pourriez aller voir si vous le trouvez s’il vous plaît ?!",
+      "nextMessageId": 6
     },
         
     {
@@ -124,18 +137,29 @@
     {
       "messageId": 15,
       "actor": "Enfant",
+      "message": "Je suis quasiment sûr qu’il...",
+      "nextMessageId": 25
+    },
+
+
+
+
+    
+    {
+      "messageId": 25,
+      "actor": "Enfant",
       "choices": [
         {
-          "choice": "Je suis quasiment sûr qu’il s’est échoué dans le jardin.",
+          "choice": "... s’est échoué dans le jardin.",
           "nextMessageId": 8
         },
         {
-          "choice": "Je suis quasiment sûr qu’il est bloqué dans la roue du moulin.",
+          "choice": "... est bloqué dans la roue du moulin.",
           "newStringState": ["removedboat"],
           "nextMessageId": 11
         },
         {
-          "choice": "Euh bah non, je sais pas...",
+          "choice": "... est au pied de votre mur.",
           "nextMessageId": 8
         }
       ]
