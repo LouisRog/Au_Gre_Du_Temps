@@ -3,7 +3,19 @@
     {
       "messageId": 51,
       "actor": "Enseignant",
-      "message": "Bonjour, je suis vraiment navré de vous déranger, vous n’auriez pas vu passer un groupe d’enfant avec un petit blond ? C’est mon fils. Pardon, je ne me suis pas présenté... Je suis l’enseignant du village. Mon fils est turbulent... il était plus facile quand j’étais avec sa mère... depuis le divorce ce n’est plus pareil. Euh... Je ne voulais pas autant m’étaler sur ma vie privée... Wow, il fait vraiment beau. Nous avons un bel été cette année.",
+      "message": "Bonjour, je suis vraiment navré de vous déranger, vous n’auriez pas vu passer un groupe d’enfant avec un petit blond ? C’est mon fils.",
+      "nextMessageId": 55
+    },
+    {
+      "messageId": 55,
+      "actor": "Enseignant",
+      "message": "Pardon, je ne me suis pas présenté... Je suis l’enseignant du village. Mon fils est turbulent... il était plus facile quand j’étais avec sa mère... depuis le divorce ce n’est plus pareil.",
+      "nextMessageId": 56
+    },
+    {
+      "messageId": 56,
+      "actor": "Enseignant",
+      "message": "Euh... Je ne voulais pas autant m’étaler sur ma vie privée... Wow, il fait vraiment beau. Nous avons un bel été cette année.",
       "nextMessageId": 52
     },
     {
@@ -16,19 +28,29 @@
       "messageId": 53,
       "actor": "Enseignant",
       "message": "Ah moi aussi, je me rappelle quand je venais souvent chercher mon ballon dans ce jardin l’été. J’étais passionné par la biodiversité de ce lieu, c'est ce qui m’a donné envie de devenir enseignant.",
+      "nextMessageId": 58
+    },
+    {
+      "messageId": 58,
+      "actor": "Enseignant",
+      "message": "Je me rappelle encore, on entendait...",
+      "nextMessageId": 57
+    },
+    {
+      "messageId": 57,
       "choices": [
         {
-          "choice": "On entendait les criquets",
+          "choice": "... les criquets",
           "newStringState": ["criquet"],
           "nextMessageId": 54
         },
         {
-          "choice": "On entendait les tourterelles",
+          "choice": "... les tourterelles",
           "newStringState": ["tourterelle"],
           "nextMessageId": 54
         },
         {
-          "choice": "On entendait les crapauds",
+          "choice": "... les crapauds",
           "newStringState": ["crapaud"],
           "nextMessageId": 54
         }
