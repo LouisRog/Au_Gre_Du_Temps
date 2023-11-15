@@ -839,8 +839,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -537, y: -416.6671}
-  m_SizeDelta: {x: 130.6, y: 100}
+  m_AnchoredPosition: {x: -501, y: -416.6671}
+  m_SizeDelta: {x: 148.83, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &95852965
 MonoBehaviour:
@@ -6552,7 +6552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   next_conversation_index: 0
-  conversations_entry_points: 0100000065000000c9000000
+  conversations_entry_points: 01000000330000006500000097000000c9000000
   stringStates: []
   DialogueBox: {fileID: 861137675}
 --- !u!4 &723650888
@@ -6764,7 +6764,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -453.5, y: -485.8}
+  m_AnchoredPosition: {x: -381, y: -480}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &738505736
