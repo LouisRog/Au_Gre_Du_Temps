@@ -12,12 +12,13 @@ public class NpcScript : MonoBehaviour
     private Vector3[] comingpathval = {new Vector3(0.4f,0.1f,0.1f),new Vector3(0.1f,0.1f,-0.6f)};
     private Vector3[] leavingpathval = {new Vector3(0.4f,0.1f,0.1f),new Vector3(-2,0.1f,0.1f)};
     private bool hasLeft = false;
+    private bool isArrived = false;
     [SerializeField] GameObject dialogueManager;
     
     // Start is called before the first frame update
     void Start()
     {   
-        transform.DOPath(comingpathval, 6);
+        transform.DOPath(comingpathval, 6).OnComplete(IsArrived);
     }
 
     async void Update(){
@@ -32,18 +33,26 @@ public class NpcScript : MonoBehaviour
         }
     }
 
+    public void IsArrived()
+    {
+        isArrived = true;
+    }
     // Update is called once per frame
     void OnMouseDown(){
-        dialogueManager.GetComponent<DialogueTrigger>().ClickOnDoor();
+        if (isArrived)
+        {
+            dialogueManager.GetComponent<DialogueTrigger>().ClickOnDoor();
+        }
     }
 
     void LeavePlace(){
+        isArrived = false;
         transform.DOPath(leavingpathval, 6);
         hasLeft = true;
     }
 
     void ResetPlace(){
         transform.position = new Vector3(2,0.1f,0.1f);
-        transform.DOPath(comingpathval, 6);
+        transform.DOPath(comingpathval, 6).OnComplete(IsArrived);
     }
 }

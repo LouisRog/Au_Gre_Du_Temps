@@ -24,8 +24,6 @@ public class DialogueManager : MonoBehaviour
     public Image memoryBackground;
     [SerializeField] GameObject UICanvas;
 
-    private GameObject objectToTrigger;
-
     static public bool dialogueEnded = false;
 
     static public List<string> stateOfTheGame = new List<String>();
@@ -166,8 +164,6 @@ public class DialogueManager : MonoBehaviour
                      da.gameObject.SetActive(true);
                     }
             }
-           // objectToTrigger = GameObject.FindWithTag(str);
-            //objectToTrigger.SetActive(true);
         }
     }
 
