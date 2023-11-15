@@ -17,6 +17,7 @@
       "messageId": 161,
       "actor": "Jardinier",
       "message": "La serre,",
+      "backgroundImage": "Jardinier_4",
       "nextMessageId": 153
     },
     {
@@ -40,13 +41,14 @@
       "messageId": 154,
       "actor": "Jardinier",
       "message": "La serre au fond de votre jardin, ne me dites pas que vous l’avez ratée. J’essayais de la garder dans un état irréprochable. Elle regorge de plantes exotiques importées, cela serait dommage de laisser tout cela disparaître.",
-      "expression": "Jardinier_triste",
+      "backgroundImage": "Jardinier_3",
       "nextMessageId": 160
     },
     {
       "messageId": 155,
       "actor": "Jardinier",
       "message": "Un ancien propriétaire qui avait trop d'argent se croyait aventurier et avait importé des plantes exotiques de ses différents voyages, c’était une sorte de panthéon de ses aventures passées.",
+      "backgroundImage": "Jardinier_2",
       "nextMessageId": 156
     },
     {
@@ -82,6 +84,7 @@
       "messageId": 158,
       "actor": "Jardinier",
       "message": "Mais si vous faites suffisamment attention, vous verrez dans votre jardin quelques plantes qui ont réussi à se faire au climat.",
+      "backgroundImage": "Jardinier_1",
       "expression": "Jardinier_rire",
       "nextMessageId": 160
     },
@@ -89,6 +92,7 @@
       "messageId": 159,
       "actor": "Jardinier",
       "message": "Et quelques arbres qui en dépassent, pas grand-chose de plus. Le temps a fait son œuvre. Quel gachis d'argent...",
+      "backgroundImage": "Jardinier_5",
       "expression": "Jardinier_triste",
       "nextMessageId": 160
     },
