@@ -47,6 +47,7 @@
       "choices": [
         {
           "choice": "...échoué dans votre jardin !",
+          "newStringState": ["rien"],
           "nextMessageId": 4
         },
         {
@@ -56,6 +57,7 @@
         },
         {
           "choice": "... quelque part.",
+          "newStringState": ["rien"],
           "nextMessageId": 24
         }
       ]
@@ -154,6 +156,7 @@
       "choices": [
         {
           "choice": "... s’est échoué dans le jardin.",
+          "newStringState": ["rien"],
           "nextMessageId": 8
         },
         {
@@ -163,6 +166,7 @@
         },
         {
           "choice": "... est au pied de votre mur.",
+          "newStringState": ["rien"],
           "nextMessageId": 8
         }
       ]

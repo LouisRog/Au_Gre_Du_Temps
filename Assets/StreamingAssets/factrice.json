@@ -22,13 +22,15 @@
       "messageId": 203,
       "actor": "Factrice",
       "message": "Figurez-vous qu’une nuit, un minuscule météore venu des étoiles a entrepris de finir son périple dans le jardin!",
-      "nextMessageId": 209
+      "nextMessageId": 209,
+      "backgroundImage": "Factrice_1"
     },
     {
       "messageId": 209,
       "actor": "Factrice",
       "message": "Elle a même laissé derrière elle un petit cratère, la bas !",
-      "nextMessageId": 204
+      "nextMessageId": 204,
+      "backgroundImage": "Factrice_2"
     },
     {
       "messageId": 204,
@@ -41,7 +43,8 @@
       "messageId": 211,
       "actor": "Factrice",
       "message": "Hmmm...",
-      "nextMessageId": 205
+      "nextMessageId": 205,
+      "expression": "Factrice_doubt"
     },
 
     {
@@ -63,7 +66,8 @@
       "messageId": 212,
       "actor": "Factrice",
       "message": "Voilà que je me mets à douter. J’aime écouter puis raconter les histoires du village. Peut-être avez-vous raison ? L’explosion d’une mine vous dîtes ? Je veux absolument en savoir plus, il faudra qu'on en reparle.",
-      "nextMessageId": 213
+      "nextMessageId": 213,
+      "expression": "Factrice_doubt"
     },
     {
       "messageId": 210,
@@ -100,13 +104,15 @@
       "messageId": 214,
       "actor": "Factrice",
       "message": "Le village avait d’ailleurs fait les gros titres à l’époque ! Allez-donc voir vous-même!",
-      "nextMessageId": 213
+      "nextMessageId": 213,
+      "backgroundImage": "Factrice_3"
     },
     {
       "messageId": 215,
       "actor": "Factrice",
       "message": "Si vous le dites... Peut-être avez-vous raison ? C'est comme ces histoires de vaccins, là. On n'est jamais sur de rien aujourd'hui...",
-      "nextMessageId": 213
+      "nextMessageId": 213,
+      "expression": "Factrice_doubt"
     },
     
     {

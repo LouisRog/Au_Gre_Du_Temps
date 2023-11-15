@@ -19,6 +19,8 @@ public class DialogueManager : MonoBehaviour
 
     public GameObject twoChoicesButton;
     public GameObject threeChoicesButton;
+    public GameObject actorContinueButton;
+    public GameObject proprioContinueButton;
     public Image memoryBackground;
     [SerializeField] GameObject UICanvas;
 
@@ -69,6 +71,8 @@ public class DialogueManager : MonoBehaviour
             proprioName.text = messageToDisplay.actor + " : ";
             proprioBackgroundBox.SetActive(true);
             actorBackgroundBox.SetActive(false);
+            actorContinueButton.SetActive(false);
+            proprioContinueButton.SetActive(true);
 
         }
         else
@@ -77,8 +81,11 @@ public class DialogueManager : MonoBehaviour
             Sprite memoryImg = Resources.Load<Sprite>("CharacterImages/" + "Proprietaire");
             if (messageToDisplay.backgroundImage != null)
             {
-                Debug.Log(messageToDisplay.backgroundImage);
                 memoryImg = Resources.Load<Sprite>("FlashbackImages/" + messageToDisplay.backgroundImage);
+            }
+            if (messageToDisplay.expression != null)
+            {
+                actorImg = Resources.Load<Sprite>("FlashbackImages/" + messageToDisplay.expression);
             }
             actorImage.sprite = actorImg;
             memoryBackground.sprite = memoryImg;
@@ -86,11 +93,15 @@ public class DialogueManager : MonoBehaviour
             actorName.text = messageToDisplay.actor + " : ";
             proprioBackgroundBox.SetActive(false);
             actorBackgroundBox.SetActive(true);
+            actorContinueButton.SetActive(true);
+            proprioContinueButton.SetActive(false);
         }
     }
 
     void DisplayMessageChoices(Message messageToDisplay)
     {
+        actorContinueButton.SetActive(false);
+        proprioContinueButton.SetActive(false);
         if (messageToDisplay.choices.Length == 3)
         {
             threeChoicesButton.SetActive(true);
@@ -138,7 +149,7 @@ public class DialogueManager : MonoBehaviour
             stateOfTheGame.Add(tag);
             ObjectStateManager();
         }
-        NextMessage(messageToDisplay.choices[choiceId].nextMessageId);
+        NextMessageChoice(messageToDisplay.choices[choiceId].nextMessageId);
 
     }
     void ObjectStateManager(){
@@ -160,7 +171,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void NextMessage(int nextMessageId)
+    public void NextMessageChoice(int nextMessageId)
     {
         activeMessage = nextMessageId;
         //Debug.Log(activeMessage);
@@ -176,6 +187,23 @@ public class DialogueManager : MonoBehaviour
         }
 
     }
+
+    public void NextMessage()
+    {
+        activeMessage = messageToDisplay.nextMessageId;
+        //Debug.Log(activeMessage);
+        if (activeMessage == 0)
+        {
+            Debug.Log("Conversation ended");
+            UICanvas.SetActive(false);
+        }
+        else
+        {
+            DisplayMessage();
+        }
+
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -184,6 +212,8 @@ public class DialogueManager : MonoBehaviour
         twoChoicesButton.SetActive(false);
         actorBackgroundBox.SetActive(false);
         proprioBackgroundBox.SetActive(false);
+        actorContinueButton.SetActive(false);
+        proprioContinueButton.SetActive(false);
 
         activables = FindObjectsOfType<DialogueActivable>(true);
         Debug.Log("l" + activables.Length);
@@ -194,7 +224,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            NextMessage(messageToDisplay.nextMessageId);
+            //NextMessage(messageToDisplay.nextMessageId);
         }
         //Debug.Log(stateOfTheGame);
         
