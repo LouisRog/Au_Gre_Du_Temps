@@ -85,7 +85,7 @@ public class DialogueManager : MonoBehaviour
             }
             if (messageToDisplay.expression != null)
             {
-                actorImg = Resources.Load<Sprite>("FlashbackImages/" + messageToDisplay.expression);
+                actorImg = Resources.Load<Sprite>("CharacterImages/" + messageToDisplay.expression);
             }
             actorImage.sprite = actorImg;
             memoryBackground.sprite = memoryImg;
