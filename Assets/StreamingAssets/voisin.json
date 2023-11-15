@@ -4,7 +4,8 @@
       "messageId": 101,
       "actor": "Voisin",
       "message": "Ces garnements, là, insupportables! J'essayais de faire ma pionce, nom d’un chien ! Aucun respect pour leurs aînés ! À mon époque, on connaissait le respect. Aujourd'hui, les moutards ne font qu'embêter le monde avec leur Nintendo et leur téléphones portables.",
-      "nextMessageId": 102
+      "nextMessageId": 102,
+      "expression": "Voisin_paconten"
     },
     {
       "messageId": 102,
@@ -16,13 +17,15 @@
       "messageId": 103,
       "actor": "Voisin",      
       "message": "Bien sûr que si, c’est tout le problème! Je vais vous dire, si on était oisif comme ça, on ne passait pas l’hiver.",
-      "nextMessageId": 122
+      "nextMessageId": 122,
+      "expression": "Voisin_paconten"
     },
     {
       "messageId": 122,
       "actor": "Voisin",      
       "message": "On connaissait la valeur du travail. On ne nous chouchoutait pas avec des cadeaux tout le temps, ah ça non !",
-      "nextMessageId": 130
+      "nextMessageId": 130,
+      "expression": "Voisin_soupcon"
     },
     {
       "messageId": 130,
@@ -40,7 +43,8 @@
       "messageId": 105,
       "actor": "Voisin",
       "message": "Ah ca, c’est vous qui l’dites! Tout votre confort, la, faut pas oublier d'où il vient! C’est nous qu’on s’est battu pour. Si le Général voyait ça, pardi, il se retournerait dans sa tombe ! On a gagné votre liberté, et voyez ce que vous en faites.",
-      "nextMessageId": 106
+      "nextMessageId": 106,
+      "expression": "Voisin_paconten"
     },
     {
       "messageId": 106,
@@ -52,7 +56,9 @@
       "messageId": 107,
       "actor": "Voisin",
       "message": "Bien sûr, et pas qu’un peu. Vous croyez que je boîte pour le plaisir?",
-      "nextMessageId": 108
+      "nextMessageId": 108,
+      "expression": "Voisin_soupcon",
+      "backgroundImage": "Voisin_00"
     },
     {
       "messageId": 108,
@@ -64,31 +70,36 @@
       "messageId": 109,
       "actor": "Voisin",
       "message": "Vous savez, le front, y’en a pas vraiment eu. Pouf.",
-      "nextMessageId": 123
+      "nextMessageId": 123,
+      "backgroundImage": "Voisin_00"
     },
     {
       "messageId": 123,
       "actor": "Voisin",
       "message": "Deux jours plus tard, on avait les boches a nos portes. Dans nos jardins...",
-      "nextMessageId": 110
+      "nextMessageId": 110,
+      "backgroundImage": "Voisin_0"
     },
     {
       "messageId": 110,
       "actor": "Propriétaire",
       "message": "Comment ça, le jardin?",
-      "nextMessageId": 111
+      "nextMessageId": 111,
+      "backgroundImage": "Voisin_0"
     },
     {
       "messageId": 111,
       "actor": "Voisin",
       "message": "Les allemands avaient élu domicile dans votre bicoque, et je peux vous dire que c’était pas facile de les déloger ces boches !",
-      "nextMessageId": 124
+      "nextMessageId": 124,
+      "backgroundImage": "Voisin_0"
     },
     {
       "messageId": 124,
       "actor": "Voisin",
       "message": "Bah voyez ces trous, la ?",
-      "nextMessageId": 112
+      "nextMessageId": 112,
+      "backgroundImage": "Voisin_0"
     },
     {
       "messageId": 112,
@@ -100,7 +111,7 @@
           "nextMessageId": 125
         },
         {
-          "choice": "Ils avaient mis des mines partout!",
+          "choice": "Ils étaient partout!",
           "newStringState": ["trou", "cavenazi"],
           "nextMessageId": 126
         }
@@ -110,22 +121,72 @@
     {
       "messageId": 125,
       "actor": "Voisin",
-      "message": "Vous savez, pour ralentir l'enemi. Avec René, on faisait avec ce qu’on pouvait. On a bien réussi à leur faire sauter le caisson pour les mettre en fuite, un vrai acte de bravoure !",
-      "nextMessageId": 113
+      "message": "Avec René, on faisait avec ce qu’on pouvait.",
+      "nextMessageId": 132,
+      "backgroundImage": "Voisin_1"
     },
+    {
+      "messageId": 132,
+      "actor": "Voisin",
+      "message": "Vous savez, pour ralentir l'enemi.",
+      "nextMessageId": 133,
+      "backgroundImage": "Voisin_2"
+    },
+    {
+      "messageId": 133,
+      "actor": "Voisin",
+      "message": "On a bien réussi à leur faire sauter le caisson pour les mettre en fuite, un vrai acte de bravoure !",
+      "nextMessageId": 134,
+      "backgroundImage": "Voisin_3"
+    },
+    {
+      "messageId": 134,
+      "actor": "Voisin",
+      "message": "Ca a fait un gros cratére dans votre jardin d'ailleurs!",
+      "nextMessageId": 113,
+      "backgroundImage": "Voisin_4"
+    },
+
+
     {
       "messageId": 113,
       "actor": "Propriétaire",
       "message": "Ça alors...",
       "nextMessageId": 115
     },
+  
 
     {
       "messageId": 126,
       "actor": "Voisin",
-      "message": "On pouvait plus sortir. Ils ont tenu le moulin jusqu’à la fin de la guerre. On a bien essayé de placer une mine avec mon René dans un dernier acte de bravoure mais on était des bleus, on avait aucune chance de réussir, et René y est resté...",
-      "nextMessageId": 114
+      "message": "On pouvait plus sortir. Ils ont tenu le moulin jusqu’à la fin de la guerre. Ils avaient mis des mines partout.",
+      "nextMessageId": 137,
+      "backgroundImage": "Voisin_0"
     },
+    {
+      "messageId": 137,
+      "actor": "Voisin",
+      "message": "Ils se prenaient leurs propres mines parfois.",
+      "nextMessageId": 135,
+      "backgroundImage": "Voisin_3"
+    },
+    {
+      "messageId": 135,
+      "actor": "Voisin",
+      "message": "Clairement, ca les a pas mis de bonne humeur. Ca attisait les tensions.",
+      "nextMessageId": 136,
+      "backgroundImage": "Voisin_5"
+    },
+    {
+      "messageId": 136,
+      "actor": "Voisin",
+      "message": "Meme René y est resté...",
+      "nextMessageId": 114,
+      "backgroundImage": "Voisin_6"
+    },
+
+
+
     {
       "messageId": 114,
       "actor": "Propriétaire",
@@ -136,7 +197,8 @@
       "messageId": 115,
       "actor": "Voisin",
       "message": "Bon c’est pas tout mais faut vraiment que j’aille pioncer moi sinon mes ulcères vont pas me lâcher.",
-      "nextMessageId": 116
+      "nextMessageId": 116,
+      "expression": "Voisin_soupcon"
     },
     {
       "messageId": 116,
@@ -160,23 +222,26 @@
       "messageId": 128,
       "actor": "Voisin",
       "message": "C'était autre chose que ces morveux...",
-      "nextMessageId": 118
+      "nextMessageId": 118,
+      "expression": "Voisin_soupcon"
     },
     {
       "messageId": 118,
       "actor": "Voisin",
       "choices": [
         {
-          "choice": "On avait fait une petite cabane...",
+          "choice": "On avait fait une petite cabane avec René...",
           "newStringState": ["cabane"],
           "nextMessageId": 119
         },
         {
-          "choice": "On avait construit une petite voiture...",
+          "choice": "J'avais fait une cabane...",
+          "newStringState": ["cabane"],
           "nextMessageId": 131
         },
         {
-          "choice": "On avait fait un terrain de vélo...",
+          "choice": "René avait fait sa cabane...",
+          "newStringState": ["cabane"],
           "nextMessageId": 131
         }
       ]
