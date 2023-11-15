@@ -53,6 +53,13 @@
       "messageId": 156,
       "actor": "Propriétaire",
       "message": "Et... Qu’en reste-t-il aujourd’hui ?",
+      "nextMessageId": 162
+    },
+    {
+      "messageId": 162,
+      "actor": "Jardinier",
+      "message": "C'est bien triste...",
+      "expression": "Jardinier_triste",
       "nextMessageId": 157
     },
     {
