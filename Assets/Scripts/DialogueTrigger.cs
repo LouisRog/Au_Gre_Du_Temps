@@ -61,6 +61,7 @@ public class Message
     public string actor;
     public int messageId;
     public int nextMessageId;
+    public string expression;
     public string message;
     public ChoiceOption[] choices;
     public string backgroundImage;
