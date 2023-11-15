@@ -196,6 +196,7 @@ public class DialogueManager : MonoBehaviour
         {
             Debug.Log("Conversation ended");
             UICanvas.SetActive(false);
+            dialogueEnded = true;
         }
         else
         {
