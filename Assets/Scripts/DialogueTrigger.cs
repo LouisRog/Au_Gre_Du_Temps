@@ -8,6 +8,7 @@ public class DialogueTrigger : MonoBehaviour
 {
     [SerializeField]
     public int next_conversation_index = 0;
+    static public bool noMoreConversation = false;
     [SerializeField]
     public int[] conversations_entry_points = { 1, 51, 101, 151, 201 };
 
@@ -47,6 +48,9 @@ public class DialogueTrigger : MonoBehaviour
         {
             DialogueBox.GetComponent<DialogueManager>().OpenDialogue(messages, conversations_entry_points[next_conversation_index]);
             next_conversation_index++;
+            if (next_conversation_index == 5){
+                noMoreConversation = true;
+            }
         }
     }
 }

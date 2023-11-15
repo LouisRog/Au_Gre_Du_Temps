@@ -17,7 +17,7 @@ public class NpcScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   
-        transform.DOPath(comingpathval, 10);
+        transform.DOPath(comingpathval, 6);
     }
 
     async void Update(){
@@ -25,9 +25,9 @@ public class NpcScript : MonoBehaviour
             DialogueManager.dialogueEnded = false;
             LeavePlace();
         }
-        else if(hasLeft){
+        else if(hasLeft && !DialogueTrigger.noMoreConversation){
             hasLeft = false;
-            await Task.Delay(10000);
+            await Task.Delay(6000);
             ResetPlace();
         }
     }
@@ -38,12 +38,12 @@ public class NpcScript : MonoBehaviour
     }
 
     void LeavePlace(){
-        transform.DOPath(leavingpathval, 10);
+        transform.DOPath(leavingpathval, 6);
         hasLeft = true;
     }
 
     void ResetPlace(){
         transform.position = new Vector3(2,0.1f,0.1f);
-        transform.DOPath(comingpathval, 10);
+        transform.DOPath(comingpathval, 6);
     }
 }
