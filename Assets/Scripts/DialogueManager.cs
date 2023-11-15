@@ -24,6 +24,8 @@ public class DialogueManager : MonoBehaviour
 
     private GameObject objectToTrigger;
 
+    static public bool dialogueEnded = false;
+
     static public List<string> stateOfTheGame = new List<String>();
 
     Message[] currentMessages;
@@ -166,6 +168,7 @@ public class DialogueManager : MonoBehaviour
         {
             Debug.Log("Conversation ended");
             UICanvas.SetActive(false);
+            dialogueEnded = true;
         }
         else
         {
