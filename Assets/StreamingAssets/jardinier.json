@@ -4,6 +4,7 @@
       "messageId": 151,
       "actor": "Jardinier",
       "message": "Bien le bonjour ! C’est la belle saison, le ciel est bleu, les bruits des animaux et cette chaleur m’ont fait repenser à la vieille serre dans votre jardin !",
+      "expression": "Jardinier_rire",
       "nextMessageId": 152
     },
     {
@@ -29,6 +30,7 @@
         },
         {
           "choice": "Haha, c’est un bien grand mot!",
+          "newStringState": [""],
           "nextMessageId": 155
         }
       ]
@@ -38,6 +40,7 @@
       "messageId": 154,
       "actor": "Jardinier",
       "message": "La serre au fond de votre jardin, ne me dites pas que vous l’avez ratée. J’essayais de la garder dans un état irréprochable. Elle regorge de plantes exotiques importées, cela serait dommage de laisser tout cela disparaître.",
+      "expression": "Jardinier_triste",
       "nextMessageId": 160
     },
     {
@@ -72,12 +75,14 @@
       "messageId": 158,
       "actor": "Jardinier",
       "message": "Mais si vous faites suffisamment attention, vous verrez dans votre jardin quelques plantes qui ont réussi à se faire au climat.",
+      "expression": "Jardinier_rire",
       "nextMessageId": 160
     },
     {
       "messageId": 159,
       "actor": "Jardinier",
       "message": "Et quelques arbres qui en dépassent, pas grand-chose de plus. Le temps a fait son œuvre. Quel gachis d'argent...",
+      "expression": "Jardinier_triste",
       "nextMessageId": 160
     },
     {
