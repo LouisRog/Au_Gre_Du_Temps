@@ -83,16 +83,16 @@
       "messageId": 8,
       "actor": "Propriétaire",
       "message": "Je n’ai rien trouvé, je suis bien désolée.",
+      "expression": "Enfant_triste",
       "nextMessageId": 9
     },
     {
       "messageId": 9,
       "actor": "Enfant",
       "message": "Oooh non mon bateau tout neuf...",
+      "expression": "Enfant_triste",
       "nextMessageId": 0
-    },
-    
-    
+    },    
     {
       "messageId": 5,
       "actor": "Enfant",
