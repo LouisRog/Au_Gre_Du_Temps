@@ -78,11 +78,17 @@
       "nextMessageId": 206
     },
 
-
+    
     {
       "messageId": 206,
       "actor": "Propriétaire",
       "message": "Etiez-vous sûr qu’il s’agissait d’un impact de météore ?",
+      "nextMessageId": 216
+    },
+    {
+      "messageId": 216,
+      "actor": "Factrice",
+      "message": "Vous ne me croyez pas ?",
       "nextMessageId": 207
     },
 
@@ -91,7 +97,7 @@
       "actor": "Factrice",
       "choices": [
         {
-          "choice": "Sûre et certaine.",
+          "choice": "Je suis sûre et certaine.",
           "newStringState": ["scintillement"],
           "nextMessageId": 214
         },
