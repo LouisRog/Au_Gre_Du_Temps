@@ -53,10 +53,12 @@
       "choices": [
         {
           "choice": "Je suis catégorique.",
+          "newStringState": ["rien"],
           "nextMessageId": 210
         },
         {
           "choice": "Maintenant que vous le dites...",
+          "newStringState": ["rien"],
           "nextMessageId": 212
         }
       ]
@@ -95,6 +97,7 @@
         },
         {
           "choice": "Voilà que je me mets à douter...",
+          "newStringState": ["rien"],
           "nextMessageId": 215
         }
       ]
