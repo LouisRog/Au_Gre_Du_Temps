@@ -36,6 +36,14 @@ public class NpcScript : MonoBehaviour
     public void IsArrived()
     {
         isArrived = true;
+
+        AudioSource audioSource = GetComponent<AudioSource>();
+        AudioClip foundClip = Resources.Load<AudioClip>("Audio/sonette");
+        if (foundClip != null)
+        {
+            audioSource.clip = foundClip;
+            audioSource.Play();
+        }
     }
     // Update is called once per frame
     void OnMouseDown(){
