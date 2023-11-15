@@ -69,14 +69,14 @@
     {
       "messageId": 109,
       "actor": "Voisin",
-      "message": "Vous savez, le front, y’en a pas vraiment eu. Pouf.",
+      "message": "Vous savez, le front, y’en a pas vraiment eu.",
       "nextMessageId": 123,
       "backgroundImage": "Voisin_00"
     },
     {
       "messageId": 123,
       "actor": "Voisin",
-      "message": "Deux jours plus tard, on avait les boches a nos portes. Dans nos jardins...",
+      "message": "Pouf. Deux jours plus tard, on avait les boches a nos portes. Dans nos jardins...",
       "nextMessageId": 110,
       "backgroundImage": "Voisin_0"
     },
@@ -98,8 +98,7 @@
       "messageId": 124,
       "actor": "Voisin",
       "message": "Bah voyez ces trous, la ?",
-      "nextMessageId": 112,
-      "backgroundImage": "Voisin_0"
+      "nextMessageId": 112
     },
     {
       "messageId": 112,
