@@ -13,12 +13,17 @@ public class NpcScript : MonoBehaviour
     private Vector3[] leavingpathval = {new Vector3(0.4f,0.1f,0.1f),new Vector3(-2,0.1f,0.1f)};
     private bool hasLeft = false;
     private bool isArrived = false;
+
+    [SerializeField] float rotationSpeed = 50f;
     [SerializeField] GameObject dialogueManager;
-    
+    [SerializeField] GameObject interrogationPoint;
+
     // Start is called before the first frame update
     void Start()
     {   
         transform.DOPath(comingpathval, 6).OnComplete(IsArrived);
+        interrogationPoint.SetActive(false);
+        interrogationPoint.transform.Rotate(Vector3.up, Random.Range(0f, 360f));
     }
 
     async void Update(){
@@ -31,11 +36,13 @@ public class NpcScript : MonoBehaviour
             await Task.Delay(6000);
             ResetPlace();
         }
+        interrogationPoint.transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
     }
 
     public void IsArrived()
     {
         isArrived = true;
+        interrogationPoint.SetActive(true);
 
         AudioSource audioSource = GetComponent<AudioSource>();
         AudioClip foundClip = Resources.Load<AudioClip>("Audio/sonette");
@@ -49,6 +56,7 @@ public class NpcScript : MonoBehaviour
     void OnMouseDown(){
         if (isArrived)
         {
+            interrogationPoint.SetActive(false);
             dialogueManager.GetComponent<DialogueTrigger>().ClickOnDoor();
         }
     }
