@@ -17,17 +17,24 @@ public class NpcScript : MonoBehaviour
     [SerializeField] float rotationSpeed = 50f;
     [SerializeField] GameObject dialogueManager;
     [SerializeField] GameObject interrogationPoint;
+    [SerializeField] GameObject finalUI;
 
     // Start is called before the first frame update
     void Start()
-    {   
+    {
+        finalUI.SetActive(false);
         transform.DOPath(comingpathval, 6).OnComplete(IsArrived);
         interrogationPoint.SetActive(false);
         interrogationPoint.transform.Rotate(Vector3.up, Random.Range(0f, 360f));
     }
 
     async void Update(){
-        if (DialogueManager.dialogueEnded){
+        if(DialogueManager.dialogueEnded && DialogueTrigger.noMoreConversation)
+        {
+            finalUI.SetActive(true);
+
+        }
+        else if (DialogueManager.dialogueEnded){
             DialogueManager.dialogueEnded = false;
             LeavePlace();
         }

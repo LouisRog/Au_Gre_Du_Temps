@@ -53,6 +53,11 @@ public class DialogueTrigger : MonoBehaviour
             }
         }
     }
+    public void QuitGame()
+    {
+        Debug.Log("QuitGame");
+        Application.Quit();
+    }
 }
 
 public class MessageList {

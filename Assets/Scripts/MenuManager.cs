@@ -7,7 +7,7 @@ public class MenuManager : MonoBehaviour
 {
     public void StartExp()
     {
-        SceneManager.LoadScene("Moulin");
+        SceneManager.LoadScene("Intro");
     }
     public void QuitGame()
     {
