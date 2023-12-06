@@ -1,0 +1,135 @@
+{
+  "messages": [
+    {
+      "messageId": 201,
+      "actor": "Factrice",
+      "message": "Bonjour ! Oh, les odeurs sont bien différentes en été ici ! J’espère que le chaleur n’a pas trop entamé les [fleurs choisies précédemment au printemps].",
+      "nextMessageId": 208
+    },
+    {
+      "messageId": 208,
+      "actor": "Factrice",
+      "message": "Quel plaisir de voir ce vieux moulin de nouveau habité et vivant ! L’Été a toujours été une saison particulière pour cette vieille bâtisse, avez-vous entendu parler de cette histoire de météore que tout le monde connaît au village ?",
+      "nextMessageId": 202
+    },
+    {
+      "messageId": 202,
+      "actor": "Propriétaire",
+      "message": "De météore, vous dîtes ?",
+      "nextMessageId": 203
+    },
+    {
+      "messageId": 203,
+      "actor": "Factrice",
+      "message": "Figurez-vous qu’une nuit, un minuscule météore venu des étoiles a entrepris de finir son périple dans le jardin!",
+      "nextMessageId": 209,
+      "backgroundImage": "Factrice_1"
+    },
+    {
+      "messageId": 209,
+      "actor": "Factrice",
+      "message": "Elle a même laissé derrière elle un petit cratère, la bas !",
+      "nextMessageId": 204,
+      "backgroundImage": "Factrice_2"
+    },
+    {
+      "messageId": 204,
+      "actor": "Propriétaire",
+      "message": "Un impact de météore ?! J’ai plutôt entendu que ce cratère était dû à l’explosion d’une mine.",
+      "nextMessageId": 211
+    },
+    
+    {
+      "messageId": 211,
+      "actor": "Factrice",
+      "message": "Hmmm...",
+      "nextMessageId": 205,
+      "expression": "Factrice_doubt"
+    },
+
+    {
+      "messageId": 205,
+      "actor": "Factrice",
+      "choices": [
+        {
+          "choice": "Je suis catégorique.",
+          "newStringState": ["rien"],
+          "nextMessageId": 210
+        },
+        {
+          "choice": "Maintenant que vous le dites...",
+          "newStringState": ["rien"],
+          "nextMessageId": 212
+        }
+      ]
+    },
+    
+    {
+      "messageId": 212,
+      "actor": "Factrice",
+      "message": "Voilà que je me mets à douter. J’aime écouter puis raconter les histoires du village. Peut-être avez-vous raison ? L’explosion d’une mine vous dîtes ? Je veux absolument en savoir plus, il faudra qu'on en reparle.",
+      "nextMessageId": 213,
+      "expression": "Factrice_doubt"
+    },
+    {
+      "messageId": 210,
+      "actor": "Factrice",
+      "message": "Je me souviens encore du vacarme qu’il y avait eu cette nuit-là !",
+      "nextMessageId": 206
+    },
+
+    
+    {
+      "messageId": 206,
+      "actor": "Propriétaire",
+      "message": "Etiez-vous sûr qu’il s’agissait d’un impact de météore ?",
+      "nextMessageId": 216
+    },
+    {
+      "messageId": 216,
+      "actor": "Factrice",
+      "message": "Vous ne me croyez pas ?",
+      "nextMessageId": 207
+    },
+
+    {
+      "messageId": 207,
+      "actor": "Factrice",
+      "choices": [
+        {
+          "choice": "Je suis sûre et certaine.",
+          "newStringState": ["scintillement"],
+          "nextMessageId": 214
+        },
+        {
+          "choice": "Voilà que je me mets à douter...",
+          "newStringState": ["rien"],
+          "nextMessageId": 215
+        }
+      ]
+    },    
+    
+    {
+      "messageId": 214,
+      "actor": "Factrice",
+      "message": "Le village avait d’ailleurs fait les gros titres à l’époque ! Allez-donc voir vous-même!",
+      "nextMessageId": 213,
+      "backgroundImage": "Factrice_3"
+    },
+    {
+      "messageId": 215,
+      "actor": "Factrice",
+      "message": "Si vous le dites... Peut-être avez-vous raison ? C'est comme ces histoires de vaccins, là. On n'est jamais sur de rien aujourd'hui...",
+      "nextMessageId": 213,
+      "expression": "Factrice_doubt"
+    },
+    
+    {
+      "messageId": 213,
+      "actor": "Factrice",
+      "message": "Moi en tout cas il faut que j'y aille, j'ai du courrier à livrer!",
+      "nextMessageId": 0
+    }    
+
+  ]
+}

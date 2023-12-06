@@ -1,0 +1,107 @@
+{
+  "messages": [
+    {
+      "messageId": 151,
+      "actor": "Jardinier",
+      "message": "Bien le bonjour ! C’est la belle saison, le ciel est bleu, les bruits des animaux et cette chaleur m’ont fait repenser à la vieille serre dans votre jardin !",
+      "expression": "Jardinier_rire",
+      "nextMessageId": 152
+    },
+    {
+      "messageId": 152,
+      "actor": "Propriétaire",
+      "message": "La serre vous dites ? Avec cette chaleur, rien n'est sûr dans mon esprit en ce moment.",
+      "nextMessageId": 161
+    },
+    {
+      "messageId": 161,
+      "actor": "Jardinier",
+      "message": "La serre,",
+      "backgroundImage": "Jardinier_4",
+      "nextMessageId": 153
+    },
+    {
+      "messageId": 153,
+      "actor": "Jardinier",
+      "choices": [
+        {
+          "choice": "Mais oui, enfin !",
+          "newStringState": ["goodgreenhouse"],
+          "nextMessageId": 154
+        },
+        {
+          "choice": "Haha, c’est un bien grand mot!",
+          "newStringState": [""],
+          "nextMessageId": 155
+        }
+      ]
+    },
+
+    {
+      "messageId": 154,
+      "actor": "Jardinier",
+      "message": "La serre au fond de votre jardin, ne me dites pas que vous l’avez ratée. J’essayais de la garder dans un état irréprochable. Elle regorge de plantes exotiques importées, cela serait dommage de laisser tout cela disparaître.",
+      "backgroundImage": "Jardinier_3",
+      "nextMessageId": 160
+    },
+    {
+      "messageId": 155,
+      "actor": "Jardinier",
+      "message": "Un ancien propriétaire qui avait trop d'argent se croyait aventurier et avait importé des plantes exotiques de ses différents voyages, c’était une sorte de panthéon de ses aventures passées.",
+      "backgroundImage": "Jardinier_2",
+      "nextMessageId": 156
+    },
+    {
+      "messageId": 156,
+      "actor": "Propriétaire",
+      "message": "Et... Qu’en reste-t-il aujourd’hui ?",
+      "nextMessageId": 162
+    },
+    {
+      "messageId": 162,
+      "actor": "Jardinier",
+      "message": "C'est bien triste...",
+      "expression": "Jardinier_triste",
+      "nextMessageId": 157
+    },
+    {
+      "messageId": 157,
+      "actor": "Jardinier",
+      "choices": [
+        {
+          "choice": "Aujourd’hui quasiment rien.",
+          "newStringState": ["plantsinsteadofgreenhouse"],
+          "nextMessageId": 158
+        },
+        {
+          "choice": "Quelques poutres écroulées...",
+          "newStringState": ["ruinedgreenhouse"],
+          "nextMessageId": 159
+        }
+      ]
+    },
+    {
+      "messageId": 158,
+      "actor": "Jardinier",
+      "message": "Mais si vous faites suffisamment attention, vous verrez dans votre jardin quelques plantes qui ont réussi à se faire au climat.",
+      "backgroundImage": "Jardinier_1",
+      "expression": "Jardinier_rire",
+      "nextMessageId": 160
+    },
+    {
+      "messageId": 159,
+      "actor": "Jardinier",
+      "message": "Et quelques arbres qui en dépassent, pas grand-chose de plus. Le temps a fait son œuvre. Quel gachis d'argent...",
+      "backgroundImage": "Jardinier_5",
+      "expression": "Jardinier_triste",
+      "nextMessageId": 160
+    },
+    {
+      "messageId": 160,
+      "actor": "Jardinier",
+      "message": "Jetez un oeil a l'occasion. Au revoir.",
+      "nextMessageId": 0
+    }
+
+  ]
+}

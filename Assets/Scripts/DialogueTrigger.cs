@@ -19,14 +19,13 @@ public class DialogueTrigger : MonoBehaviour
     void Start()
     {
         messages = new Message[1000]; // Make sure its big enough for our proto
-        string resourcesPath = Application.streamingAssetsPath;
 
-        string[] jsonFiles = Directory.GetFiles(resourcesPath, "*.json");
+        TextAsset[] jsonFiles = Resources.LoadAll<TextAsset>("Json/");
         List<Message> allMessages = new List<Message>();
 
-        foreach (string filePath in jsonFiles)
+        foreach (TextAsset filePath in jsonFiles)
         {
-            string json = File.ReadAllText(filePath);
+            string json = filePath.text;
             MessageList data = JsonUtility.FromJson<MessageList>(json);
             foreach (Message d in data.messages) {
                 allMessages.Add(d);
