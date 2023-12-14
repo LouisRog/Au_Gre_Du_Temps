@@ -40,11 +40,12 @@ public class NpcScript : MonoBehaviour
         }
         else if(hasLeft && !DialogueTrigger.noMoreConversation){
             hasLeft = false;
-            await Task.Delay(6000);
+            //await Task.Delay(6000);
             ResetPlace();
         }
         interrogationPoint.transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
     }
+
 
     public void IsArrived()
     {
